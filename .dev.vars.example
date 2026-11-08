@@ -1,0 +1,8 @@
+# Секреты воркера. Локально: скопируйте в .dev.vars (файл в .gitignore).
+# В продакшне: npx wrangler secret put ИМЯ
+#
+# Касса RollyPay (фаза 5). Выдаются при создании кассы через поддержку.
+ROLLYPAY_API_KEY=
+ROLLYPAY_SIGNING_SECRET=
+# Resend (фаза 5).
+RESEND_API_KEY=

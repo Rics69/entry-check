@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "entry-check",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      // Ссылка воркера на самого себя, нужна OpenNext. Имя должно совпадать с "name".
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "entry-check"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "entry-check",
+      // Замените на id из `npx wrangler d1 create entry-check` (фаза 0 в docs/DEV_PLAN.md).
+      // Для локальной разработки (--local) подходит и этот заполнитель.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "db/migrations"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+  // Ежедневный cron для дальних напоминаний и worker.ts добавим в фазе 5.
+}

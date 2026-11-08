@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "Entry Check — everything you need to enter, on one screen",
+    "description": "Passport + route → visas, ETAs, arrival cards and passport rules for every stop. Official links only. Free, 30 seconds."
+  },
+  "header": {
+    "home": "Entry Check — home",
+    "language": "Language"
+  },
+  "footer": {
+    "disclaimer": "Reference information, not legal advice. You file applications yourself on official websites.",
+    "copyright": "© {year} Entry Check"
+  },
+  "home": {
+    "title": "Everything you need to enter. On one screen.",
+    "subtitle": "Passport + route → visas, ETAs, arrival cards and passport rules for every stop. Official links only.",
+    "cta": "Check my trip",
+    "ctaNote": "Free · 30 seconds · no sign-up"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "back": "Back to home"
+  }
+}
