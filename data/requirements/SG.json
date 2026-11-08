@@ -1,0 +1,49 @@
+[
+  {
+    "id": "sg-visa-free-90",
+    "destination": "SG",
+    "appliesTo": { "passports": ["US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "AU"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 90 дней", "en": "Visa-free up to 90 days" },
+    "officialUrl": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements",
+    "stayLimitDays": 90,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "На границе могут попросить обратный билет и подтверждение средств.",
+      "en": "You may be asked for an onward ticket and proof of funds at the border."
+    },
+    "source": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "sg-visa-free-30",
+    "destination": "SG",
+    "appliesTo": { "passports": ["CA"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней", "en": "Visa-free up to 30 days" },
+    "officialUrl": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": { "ru": "Продлить можно онлайн через ICA, если есть основания.", "en": "Extensions can be requested online via ICA if justified." },
+    "source": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "sg-arrival-card",
+    "destination": "SG",
+    "appliesTo": { "passports": "ALL" },
+    "kind": "arrival_card",
+    "name": { "ru": "Карта прибытия SG Arrival Card", "en": "SG Arrival Card" },
+    "officialUrl": "https://eservices.ica.gov.sg/sgarrivalcard/",
+    "fee": { "amount": 0, "currency": "SGD" },
+    "windowDaysBeforeArrival": 3,
+    "notes": {
+      "ru": "Бесплатно, вместе с электронной медицинской декларацией. Подаётся в течение 3 дней до прилёта, включая день прилёта, по времени Сингапура — при вечернем рейсе ровно за 72 часа портал может быть ещё закрыт. Также — в приложении MyICA Mobile. Визу не заменяет. Не нужна при пересадке без выхода из транзитной зоны.",
+      "en": "Free, includes the electronic health declaration. Submit within 3 days before arrival, including the arrival day, Singapore time — for an evening flight the portal may still be closed exactly 72 hours ahead. Also available in the MyICA Mobile app. Does not replace a visa. Not needed if you transit without leaving the transit area."
+    },
+    "source": "https://eservices.ica.gov.sg/sgarrivalcard/",
+    "verifiedAt": "2026-11-09"
+  }
+]

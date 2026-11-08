@@ -1,0 +1,34 @@
+[
+  {
+    "id": "gb-eta",
+    "destination": "GB",
+    "appliesTo": { "passports": ["US", "CA", "AU", "DE", "FR", "IT", "ES", "NL", "PL"] },
+    "kind": "eta",
+    "name": { "ru": "Электронное разрешение на въезд (UK ETA)", "en": "Electronic Travel Authorisation (UK ETA)" },
+    "officialUrl": "https://www.gov.uk/eta",
+    "fee": { "amount": 20, "currency": "GBP" },
+    "processing": { "ru": "Обычно до 3 рабочих дней", "en": "Usually within 3 working days" },
+    "recommendDaysBeforeArrival": 7,
+    "stayLimitDays": 180,
+    "passportValidity": { "ru": "Действителен на весь срок пребывания", "en": "Valid for the whole stay" },
+    "notes": {
+      "ru": "Действует 2 года или до окончания срока паспорта. Проще всего подать в официальном приложении UK ETA. Без ETA авиакомпания не посадит на рейс.",
+      "en": "Valid for 2 years or until your passport expires. The official UK ETA app is the easiest way to apply. Airlines will deny boarding without it."
+    },
+    "source": "https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "gb-visa",
+    "destination": "GB",
+    "appliesTo": { "passports": ["RU", "KZ", "BY", "UZ", "KG", "AM"] },
+    "kind": "visa",
+    "name": { "ru": "Нужна виза (Standard Visitor visa)", "en": "Visa required (Standard Visitor visa)" },
+    "officialUrl": "https://www.gov.uk/standard-visitor",
+    "processing": { "ru": "Обычно около 3 недель", "en": "Usually about 3 weeks" },
+    "recommendDaysBeforeArrival": 60,
+    "passportValidity": { "ru": "Действителен на весь срок пребывания", "en": "Valid for the whole stay" },
+    "source": "https://www.gov.uk/check-uk-visa",
+    "verifiedAt": "2026-11-09"
+  }
+]

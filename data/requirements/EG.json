@@ -1,0 +1,56 @@
+[
+  {
+    "id": "eg-voa",
+    "destination": "EG",
+    "appliesTo": { "passports": ["RU", "BY", "AM"] },
+    "kind": "visa_on_arrival",
+    "name": { "ru": "Виза по прилёте или e-Visa на 30 дней", "en": "Visa on arrival or e-Visa for 30 days" },
+    "officialUrl": "https://www.visa2egypt.gov.eg/",
+    "fee": { "amount": 30, "currency": "USD" },
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": {
+      "ru": "Визу-марку (30 $ наличными) можно купить в аэропорту или заранее оформить e-Visa на visa2egypt.gov.eg — минимум за 7 дней до вылета; многократная e-Visa — 65 $. С 1 января 2027 однократная виза — 33 $. В аэропорту Каира тестируют цифровую визу по прилёте с QR-кодом (+6 $ сервисного сбора). Курорты Южного Синая (Шарм-эль-Шейх, Дахаб, Нувейба, Таба) до 15 дней без выезда за их пределы — бесплатный штамп «Sinai only»; в Хургаде и Каире он не действует.",
+      "en": "Buy the visa stamp ($30 cash) at the airport or get an e-Visa in advance at visa2egypt.gov.eg — at least 7 days before departure; a multiple-entry e-Visa costs $65. From 1 January 2027 a single-entry visa is $33. Cairo airport is piloting a digital visa on arrival with a QR code (+$6 service fee). South Sinai resorts only (Sharm El Sheikh, Dahab, Nuweiba, Taba) for up to 15 days: free “Sinai only” stamp; it is not valid in Hurghada or Cairo."
+    },
+    "source": "https://www.visa2egypt.gov.eg/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "eg-visa-tour",
+    "destination": "EG",
+    "appliesTo": { "passports": ["KZ", "UZ"] },
+    "kind": "visa",
+    "name": {
+      "ru": "Виза заранее в посольстве (по прилёте — только с турпакетом)",
+      "en": "Visa in advance at the embassy (on arrival only with a package tour)"
+    },
+    "officialUrl": "https://www.mfa.gov.eg/",
+    "recommendDaysBeforeArrival": 21,
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": {
+      "ru": "e-Visa недоступна. Самостоятельная поездка в Каир или Хургаду — виза заранее в посольстве Египта. С организованным туром, ваучером и гарантийным письмом туроператора — виза по прилёте за 30 $. Курорты Южного Синая (Шарм-эль-Шейх и др.) до 15 дней — бесплатный штамп «Sinai only». До 21 года — только с родителями. Для Узбекистана ужесточение въезда на Синай отложено до марта 2027.",
+      "en": "No e-Visa. Independent trips to Cairo or Hurghada require a visa in advance from an Egyptian embassy. With a package tour, voucher and a tour operator guarantee letter — visa on arrival for $30. South Sinai resorts (Sharm El Sheikh etc.) up to 15 days — free “Sinai only” stamp. Under 21 — only with parents. For Uzbekistan, stricter Sinai entry rules are postponed until March 2027."
+    },
+    "source": "https://www.visa2egypt.gov.eg/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "eg-visa-kg",
+    "destination": "EG",
+    "appliesTo": { "passports": ["KG"] },
+    "kind": "visa",
+    "name": { "ru": "Виза заранее в посольстве", "en": "Visa in advance at the embassy" },
+    "officialUrl": "https://www.mfa.gov.eg/",
+    "recommendDaysBeforeArrival": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": {
+      "ru": "С 1 ноября 2026 упрощённый въезд отменён, e-Visa недоступна. Виза по прилёте — только с гарантийным письмом сертифицированного египетского турагентства. Туристы 16–40 лет — только с близкими родственниками (родители, супруг, дети). Нужны наличные: от 3 000 $ на человека или 5 000 $ на семью.",
+      "en": "Since 1 November 2026 simplified entry is cancelled and no e-Visa is available. Visa on arrival only with a guarantee letter from a certified Egyptian travel agency. Travellers aged 16–40 must be accompanied by close relatives (parents, spouse, children). Cash required: at least $3,000 per person or $5,000 per family."
+    },
+    "validFrom": "2026-11-01",
+    "source": "https://www.mfa.gov.eg/",
+    "verifiedAt": "2026-11-09"
+  }
+]

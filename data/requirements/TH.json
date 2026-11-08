@@ -1,0 +1,91 @@
+[
+  {
+    "id": "th-visa-exempt-30",
+    "destination": "TH",
+    "appliesTo": { "passports": ["US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "CA", "AU", "KG"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней (туризм)", "en": "Visa-free up to 30 days (tourism)" },
+    "officialUrl": "https://www.thaievisa.go.th/",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "С 15 сентября 2026 безвиз сокращён с 60 до 30 дней и действует только для туризма. Продление ещё на 30 дней — в иммиграционном офисе. Через сухопутные границы — не больше двух въездов в календарный год.",
+      "en": "From 15 September 2026 the visa exemption is cut from 60 to 30 days and covers tourism only. A one-time 30-day extension is possible at an immigration office. Overland entries are limited to two per calendar year."
+    },
+    "validFrom": "2026-09-15",
+    "source": "https://www.tatnews.org/2026/09/thailand-introduces-new-30-day-and-15-day-visa-exemption-rules-from-15-september/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "th-bilateral-30",
+    "destination": "TH",
+    "appliesTo": { "passports": ["RU", "KZ"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней (межгосударственное соглашение)", "en": "Visa-free up to 30 days (bilateral agreement)" },
+    "officialUrl": "https://www.thaievisa.go.th/",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "Действует по двустороннему соглашению, реформа 15 сентября 2026 его не меняет.",
+      "en": "Based on a bilateral agreement; not affected by the 15 September 2026 reform."
+    },
+    "source": "https://helsinki.thaiembassy.org/en/publicservice/updated-tourist-visa-exemption-scheme-30-days-effective-15-september-2",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "th-voa-15",
+    "destination": "TH",
+    "appliesTo": { "passports": ["BY"] },
+    "kind": "visa_on_arrival",
+    "name": { "ru": "Виза по прилёте на 15 дней", "en": "Visa on arrival for 15 days" },
+    "officialUrl": "https://www.thaievisa.go.th/",
+    "fee": { "amount": 2000, "currency": "THB" },
+    "stayLimitDays": 15,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "С 15 сентября 2026 Беларусь перенесена в список визы по прилёте. Для поездки дольше 15 дней оформите туристическую e-Visa заранее.",
+      "en": "From 15 September 2026 Belarus is on the visa-on-arrival list. For trips longer than 15 days, get a tourist e-Visa in advance."
+    },
+    "validFrom": "2026-09-15",
+    "source": "https://www.tatnews.org/2026/09/thailand-introduces-new-30-day-and-15-day-visa-exemption-rules-from-15-september/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "th-evisa",
+    "destination": "TH",
+    "appliesTo": { "passports": ["UZ", "AM"] },
+    "kind": "evisa",
+    "name": { "ru": "Туристическая e-Visa", "en": "Tourist e-Visa" },
+    "officialUrl": "https://www.thaievisa.go.th/",
+    "processing": { "ru": "Обычно до 14 рабочих дней", "en": "Usually up to 14 working days" },
+    "recommendDaysBeforeArrival": 21,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "Подавайте только на thaievisa.go.th — платные сайты-посредники берут наценку.",
+      "en": "Apply only at thaievisa.go.th — paid middleman sites add a markup."
+    },
+    "validFrom": "2026-09-15",
+    "source": "https://daryo.uz/en/2026/09/03/thailand-to-end-60-day-visa-free-regime-for-uzbek-citizens-from-september-15/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "th-tdac",
+    "destination": "TH",
+    "appliesTo": { "passports": "ALL" },
+    "kind": "arrival_card",
+    "name": { "ru": "Цифровая карта прибытия TDAC", "en": "Thailand Digital Arrival Card (TDAC)" },
+    "officialUrl": "https://tdac.immigration.go.th/",
+    "fee": { "amount": 0, "currency": "THB" },
+    "windowHoursBeforeArrival": 72,
+    "notes": {
+      "ru": "Бесплатно. Подаётся не раньше чем за 3 дня до прилёта. Не нужна при пересадке без выхода из аэропорта. Остерегайтесь платных сайтов — около 10% туристов платят посредникам за бесплатную форму.",
+      "en": "Free. Submit no earlier than 3 days before arrival. Not needed if you transit without leaving the airport. Beware of paid lookalike sites."
+    },
+    "source": "https://tdac.immigration.go.th/",
+    "verifiedAt": "2026-11-09"
+  }
+]

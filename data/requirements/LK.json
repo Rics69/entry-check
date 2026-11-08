@@ -1,0 +1,44 @@
+[
+  {
+    "id": "lk-eta-free",
+    "destination": "LK",
+    "appliesTo": { "passports": ["RU", "BY", "KZ"] },
+    "kind": "eta",
+    "name": { "ru": "Бесплатное разрешение ETA на 30 дней", "en": "Free ETA for 30 days" },
+    "officialUrl": "https://eta.gov.lk/",
+    "fee": { "amount": 0, "currency": "USD" },
+    "processing": { "ru": "Обычно 1–3 дня", "en": "Usually 1–3 days" },
+    "recommendDaysBeforeArrival": 7,
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "С 25 мая 2026 ETA для граждан 40 стран бесплатна, но оформлять её всё равно нужно заранее. Двукратный въезд, 30 дней с первого прилёта.",
+      "en": "Since 25 May 2026 the ETA is free for 40 nationalities, but you still must get it in advance. Double entry, 30 days from first arrival."
+    },
+    "validFrom": "2026-05-25",
+    "validUntil": "2027-05-24",
+    "source": "https://www.immigration.gov.lk/content/files/visa/Free%20Tourist%20Visas%20for%20Nationals%20of%2040%20Selected%20Countries.pdf",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "lk-eta",
+    "destination": "LK",
+    "appliesTo": { "passports": ["UZ", "KG", "AM"] },
+    "kind": "eta",
+    "name": { "ru": "Разрешение ETA на 30 дней", "en": "ETA for 30 days" },
+    "officialUrl": "https://eta.gov.lk/",
+    "fee": { "amount": 50, "currency": "USD" },
+    "processing": { "ru": "Обычно 1–3 дня", "en": "Usually 1–3 days" },
+    "recommendDaysBeforeArrival": 7,
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "Официальный сайт только eta.gov.lk — сайты-посредники берут наценку.",
+      "en": "The only official site is eta.gov.lk — middleman sites add a markup."
+    },
+    "source": "https://eta.gov.lk/",
+    "verifiedAt": "2026-11-09"
+  }
+]

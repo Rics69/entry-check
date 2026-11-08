@@ -1,0 +1,78 @@
+[
+  {
+    "id": "cn-ru-visa-free",
+    "destination": "CN",
+    "appliesTo": { "passports": ["RU"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней", "en": "Visa-free up to 30 days" },
+    "officialUrl": "https://cs.mfa.gov.cn/",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": {
+      "ru": "Временный безвизовый режим для обычных паспортов продлён до 31 декабря 2027: туризм, бизнес, гости, обмены, транзит.",
+      "en": "The temporary visa-free regime for ordinary passports is extended to 31 December 2027: tourism, business, visiting, exchanges, transit."
+    },
+    "validUntil": "2027-12-31",
+    "source": "https://english.shanghai.gov.cn/en-VisaLatest/20260520/0b86f04686c84c4a8bdca4f77dbee1eb.html",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "cn-mutual-30",
+    "destination": "CN",
+    "appliesTo": { "passports": ["KZ", "UZ"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней (взаимный безвиз)", "en": "Visa-free up to 30 days (mutual agreement)" },
+    "officialUrl": "https://cs.mfa.gov.cn/",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": { "ru": "Не больше 90 дней суммарно за любые 180 дней.", "en": "No more than 90 days in total within any 180 days." },
+    "source": "https://cs.mfa.gov.cn/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "cn-by-30",
+    "destination": "CN",
+    "appliesTo": { "passports": ["BY"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней (взаимный безвиз)", "en": "Visa-free up to 30 days (mutual agreement)" },
+    "officialUrl": "https://cs.mfa.gov.cn/",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": { "ru": "Не больше 90 дней суммарно за календарный год.", "en": "No more than 90 days in total per calendar year." },
+    "source": "https://cs.mfa.gov.cn/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "cn-am-90",
+    "destination": "CN",
+    "appliesTo": { "passports": ["AM"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 90 дней (взаимный безвиз)", "en": "Visa-free up to 90 days (mutual agreement)" },
+    "officialUrl": "https://cs.mfa.gov.cn/",
+    "stayLimitDays": 90,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": {
+      "ru": "Не больше 90 дней в любые 180 дней — одной поездкой или несколькими.",
+      "en": "No more than 90 days in any 180 days — in one trip or several."
+    },
+    "source": "https://cs.mfa.gov.cn/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "cn-visa",
+    "destination": "CN",
+    "appliesTo": { "passports": ["KG"] },
+    "kind": "visa",
+    "name": { "ru": "Нужна виза (в консульстве или визовом центре)", "en": "Visa required (consulate or visa centre)" },
+    "officialUrl": "https://cs.mfa.gov.cn/",
+    "processing": { "ru": "Обычно 4–5 рабочих дней", "en": "Usually 4–5 working days" },
+    "recommendDaysBeforeArrival": 21,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": {
+      "ru": "С 20 августа 2026 без визы можно: транзит до 240 часов через 65 пунктов пропуска при подтверждённом билете в третью страну; остров Хайнань до 30 дней — без выезда на материковую часть Китая.",
+      "en": "Since 20 August 2026 no visa is needed for: transit of up to 240 hours via 65 ports of entry with a confirmed onward ticket to a third country; Hainan island for up to 30 days — without travelling to the mainland."
+    },
+    "source": "https://www.nia.gov.cn/",
+    "verifiedAt": "2026-11-09"
+  }
+]

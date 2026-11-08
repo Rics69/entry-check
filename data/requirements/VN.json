@@ -1,0 +1,87 @@
+[
+  {
+    "id": "vn-visa-exempt-45",
+    "destination": "VN",
+    "appliesTo": { "passports": ["RU", "BY", "GB", "DE", "FR", "IT", "ES"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 45 дней", "en": "Visa-free up to 45 days" },
+    "officialUrl": "https://evisa.gov.vn/",
+    "stayLimitDays": 45,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": { "ru": "Для более долгой поездки оформите e-Visa на 90 дней.", "en": "For a longer stay, get a 90-day e-Visa." },
+    "source": "https://mofa.gov.vn/tin-chi-tiet/chi-tiet/viet-nam-39-s-visa-exemption-list-57163-596.html",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "vn-visa-exempt-45-r229",
+    "destination": "VN",
+    "appliesTo": { "passports": ["PL", "NL"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 45 дней (до 14 августа 2028)", "en": "Visa-free up to 45 days (until 14 August 2028)" },
+    "officialUrl": "https://evisa.gov.vn/",
+    "stayLimitDays": 45,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "По Резолюции 229/NQ-CP, действует до 14 августа 2028 и для самостоятельных поездок — без привязки к турам. Для более долгой поездки оформите e-Visa на 90 дней.",
+      "en": "Under Resolution 229/NQ-CP, valid until 14 August 2028, including independent travel — no tour booking required. For a longer stay, get a 90-day e-Visa."
+    },
+    "validUntil": "2028-08-14",
+    "source": "https://mofa.gov.vn/tin-chi-tiet/chi-tiet/viet-nam-39-s-visa-exemption-list-57163-596.html",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "vn-bilateral-30",
+    "destination": "VN",
+    "appliesTo": { "passports": ["KZ", "KG"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней (межгосударственное соглашение)", "en": "Visa-free up to 30 days (bilateral agreement)" },
+    "officialUrl": "https://evisa.gov.vn/",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "Для граждан Казахстана — не больше 90 дней суммарно за любые 180 дней.",
+      "en": "Citizens of Kazakhstan: no more than 90 days in total within any 180 days."
+    },
+    "source": "https://mofa.gov.vn/tin-chi-tiet/chi-tiet/viet-nam-39-s-visa-exemption-list-57163-596.html",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "vn-evisa",
+    "destination": "VN",
+    "appliesTo": { "passports": ["US", "CA", "AU", "AM", "UZ"] },
+    "kind": "evisa",
+    "name": { "ru": "Электронная виза (e-Visa) до 90 дней", "en": "e-Visa up to 90 days" },
+    "officialUrl": "https://evisa.gov.vn/",
+    "fee": { "amount": 25, "currency": "USD" },
+    "processing": { "ru": "Обычно 3 рабочих дня", "en": "Usually 3 working days" },
+    "recommendDaysBeforeArrival": 10,
+    "stayLimitDays": 90,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "$25 — однократная, $50 — многократная. Официальный сайт только evisa.gov.vn: сайты с похожими адресами берут наценку. Исключение — остров Фукуок: без визы до 30 дней при прямом прилёте на остров или пересадке в Ханое или Хошимине без выхода из транзитной зоны.",
+      "en": "$25 single entry, $50 multiple entry. The only official site is evisa.gov.vn — lookalike sites add a markup. Exception: Phu Quoc island — visa-free up to 30 days when flying directly to the island or connecting in Hanoi or Ho Chi Minh City without leaving the transit area."
+    },
+    "source": "https://evisa.gov.vn/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "vn-dac",
+    "destination": "VN",
+    "appliesTo": { "passports": "ALL" },
+    "kind": "arrival_card",
+    "name": { "ru": "Цифровая карта прибытия (Digital Arrival Card)", "en": "Digital Arrival Card" },
+    "officialUrl": "https://prearrival.immigration.gov.vn/",
+    "fee": { "amount": 0, "currency": "VND" },
+    "windowHoursBeforeArrival": 72,
+    "notes": {
+      "ru": "Бесплатно. Обязательна во всех международных аэропортах: с 15 апреля 2026 в Хошимине, с июня 2026 — в Ханое, Дананге, Камрани, на Фукуоке и других. После подачи и подтверждения кодом из письма придёт QR-код — покажите его на паспортном контроле. На каждого ребёнка — отдельная форма. Визу не заменяет. Не нужна при пересадке без выхода из транзитной зоны.",
+      "en": "Free. Mandatory at all international airports: Ho Chi Minh City since 15 April 2026; Hanoi, Da Nang, Cam Ranh, Phu Quoc and others since June 2026. After submitting and confirming with the code from the email, you get a QR code to show at passport control. Each child needs a separate form. Does not replace a visa. Not needed if you transit without leaving the transit area."
+    },
+    "source": "https://vn.usembassy.gov/notice-implementation-of-pre-arrival-declaration-for-international-visitors-arriving-at-airports-in-vietnam/",
+    "verifiedAt": "2026-11-09"
+  }
+]

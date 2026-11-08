@@ -1,0 +1,100 @@
+[
+  {
+    "id": "kr-visa-free-90",
+    "destination": "KR",
+    "appliesTo": { "passports": ["US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "AU"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 90 дней", "en": "Visa-free up to 90 days" },
+    "officialUrl": "https://www.k-eta.go.kr/",
+    "stayLimitDays": 90,
+    "passportValidity": { "ru": "Рекомендуется не менее 6 месяцев", "en": "At least 6 months recommended" },
+    "validUntil": "2026-12-31",
+    "source": "https://www.k-eta.go.kr/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "kr-visa-free-ca",
+    "destination": "KR",
+    "appliesTo": { "passports": ["CA"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 6 месяцев", "en": "Visa-free up to 6 months" },
+    "officialUrl": "https://www.k-eta.go.kr/",
+    "stayLimitDays": 180,
+    "passportValidity": { "ru": "Рекомендуется не менее 6 месяцев", "en": "At least 6 months recommended" },
+    "validUntil": "2026-12-31",
+    "source": "https://www.k-eta.go.kr/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "kr-keta-exempt",
+    "destination": "KR",
+    "appliesTo": { "passports": ["US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "CA", "AU"] },
+    "kind": "info",
+    "name": { "ru": "K-ETA временно не нужна (до 31 декабря 2026)", "en": "K-ETA temporarily not required (until 31 December 2026)" },
+    "officialUrl": "https://www.k-eta.go.kr/",
+    "notes": {
+      "ru": "Можно оформить K-ETA добровольно — тогда не нужна карта прибытия.",
+      "en": "You may still apply for K-ETA voluntarily — then you don’t need an arrival card."
+    },
+    "validUntil": "2026-12-31",
+    "source": "https://www.ey.com/content/dam/ey-unified-site/ey-com/en-gl/technical/tax-alerts/documents/korea-extends-temporary-electronic-travel-authorization-exemption-until-31-december-2026.pdf",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "kr-keta",
+    "destination": "KR",
+    "appliesTo": { "passports": ["US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "AU"] },
+    "kind": "eta",
+    "name": { "ru": "Электронное разрешение K-ETA", "en": "K-ETA electronic travel authorization" },
+    "officialUrl": "https://www.k-eta.go.kr/",
+    "fee": { "amount": 10000, "currency": "KRW" },
+    "processing": { "ru": "Обычно до 72 часов", "en": "Usually within 72 hours" },
+    "recommendDaysBeforeArrival": 7,
+    "stayLimitDays": 90,
+    "passportValidity": { "ru": "Рекомендуется не менее 6 месяцев", "en": "At least 6 months recommended" },
+    "notes": {
+      "ru": "Действует 3 года (или до окончания срока паспорта), многократный въезд. С комиссией платёжного шлюза — около 10 300 ₩, сбор не возвращается. Официальный сайт только k-eta.go.kr. С K-ETA карта прибытия не нужна.",
+      "en": "Valid for 3 years (or until your passport expires), multiple entry. About ₩10,300 with the payment gateway fee, non-refundable. The only official site is k-eta.go.kr. With K-ETA you don’t need an arrival card."
+    },
+    "validFrom": "2027-01-01",
+    "source": "https://www.k-eta.go.kr/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "kr-keta-ca",
+    "destination": "KR",
+    "appliesTo": { "passports": ["CA"] },
+    "kind": "eta",
+    "name": { "ru": "Электронное разрешение K-ETA", "en": "K-ETA electronic travel authorization" },
+    "officialUrl": "https://www.k-eta.go.kr/",
+    "fee": { "amount": 10000, "currency": "KRW" },
+    "processing": { "ru": "Обычно до 72 часов", "en": "Usually within 72 hours" },
+    "recommendDaysBeforeArrival": 7,
+    "stayLimitDays": 180,
+    "passportValidity": { "ru": "Рекомендуется не менее 6 месяцев", "en": "At least 6 months recommended" },
+    "notes": {
+      "ru": "K-ETA не сокращает безвизовый срок для граждан Канады — до 6 месяцев по двустороннему соглашению. Действует 3 года (или до окончания срока паспорта), многократный въезд. Официальный сайт только k-eta.go.kr. С K-ETA карта прибытия не нужна.",
+      "en": "K-ETA does not shorten the visa-free stay for Canadians — up to 6 months under the bilateral agreement. Valid for 3 years (or until your passport expires), multiple entry. The only official site is k-eta.go.kr. With K-ETA you don’t need an arrival card."
+    },
+    "validFrom": "2027-01-01",
+    "source": "https://www.k-eta.go.kr/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "kr-e-arrival",
+    "destination": "KR",
+    "appliesTo": { "passports": ["US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "CA", "AU"] },
+    "kind": "arrival_card",
+    "name": { "ru": "Электронная карта прибытия (e-Arrival Card)", "en": "e-Arrival Card" },
+    "officialUrl": "https://www.e-arrivalcard.go.kr/",
+    "fee": { "amount": 0, "currency": "KRW" },
+    "windowHoursBeforeArrival": 72,
+    "notes": {
+      "ru": "Бесплатно. Подаётся за 72 часа до прилёта по времени Кореи; отправленная карта действует 72 часа — если не успели въехать, подайте заново. При желании можно заполнить бумажную карту в аэропорту. Не нужна, если у вас одобрена K-ETA.",
+      "en": "Free. Submit within 72 hours before arrival, Korea time; a submitted card is valid for 72 hours — if you haven’t entered by then, submit again. You can still fill in a paper card at the airport instead. Not needed if you hold an approved K-ETA."
+    },
+    "validUntil": "2026-12-31",
+    "source": "https://www.e-arrivalcard.go.kr/",
+    "verifiedAt": "2026-11-09"
+  }
+]

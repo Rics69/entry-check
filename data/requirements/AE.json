@@ -1,0 +1,45 @@
+[
+  {
+    "id": "ae-voa-90",
+    "destination": "AE",
+    "appliesTo": { "passports": ["RU", "BY", "AM"] },
+    "kind": "visa_on_arrival",
+    "name": { "ru": "Бесплатная виза по прилёте на 90 дней", "en": "Free visa on arrival for 90 days" },
+    "officialUrl": "https://u.ae/",
+    "fee": { "amount": 0, "currency": "AED" },
+    "stayLimitDays": 90,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": {
+      "ru": "Штамп ставят на паспортном контроле, заранее ничего оформлять не нужно.",
+      "en": "Stamped at passport control; nothing to arrange in advance."
+    },
+    "source": "https://u.ae/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "ae-voa-30",
+    "destination": "AE",
+    "appliesTo": { "passports": ["KZ", "UZ"] },
+    "kind": "visa_on_arrival",
+    "name": { "ru": "Бесплатная виза по прилёте на 30 дней", "en": "Free visa on arrival for 30 days" },
+    "officialUrl": "https://u.ae/",
+    "fee": { "amount": 0, "currency": "AED" },
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "source": "https://u.ae/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "ae-visa",
+    "destination": "AE",
+    "appliesTo": { "passports": ["KG"] },
+    "kind": "visa",
+    "name": { "ru": "Виза заранее (через авиакомпанию, отель или спонсора)", "en": "Visa in advance (via airline, hotel or sponsor)" },
+    "officialUrl": "https://icp.gov.ae/",
+    "processing": { "ru": "Обычно 3–5 рабочих дней", "en": "Usually 3–5 working days" },
+    "recommendDaysBeforeArrival": 14,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "source": "https://icp.gov.ae/",
+    "verifiedAt": "2026-11-09"
+  }
+]

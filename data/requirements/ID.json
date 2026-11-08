@@ -1,0 +1,85 @@
+[
+  {
+    "id": "id-evoa",
+    "destination": "ID",
+    "appliesTo": { "passports": ["RU", "UZ", "AM", "US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "CA", "AU"] },
+    "kind": "visa_on_arrival",
+    "name": { "ru": "Виза по прилёте (VOA / e-VOA) на 30 дней", "en": "Visa on arrival (VOA / e-VOA) for 30 days" },
+    "officialUrl": "https://evisa.imigrasi.go.id/",
+    "fee": { "amount": 500000, "currency": "IDR" },
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "Сбор одинаковый онлайн (e-VOA) и в аэропорту. С заранее оформленной e-VOA в аэропортах Джакарты и Бали можно пройти через автоматические турникеты без очереди на оплату. День прилёта считается первым днём. Продление — однократно ещё на 30 дней, для e-VOA онлайн. Объявлено повышение сбора, дата пока не назначена.",
+      "en": "Same fee online (e-VOA) and at the airport. With an e-VOA arranged in advance you can use the autogates at Jakarta and Bali airports and skip the payment queue. Arrival day counts as day one. Extendable once for 30 days, online for e-VOA. A fee increase has been announced, no date set yet."
+    },
+    "source": "https://evisa.imigrasi.go.id/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "id-visa-free-30",
+    "destination": "ID",
+    "appliesTo": { "passports": ["KZ", "BY"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней", "en": "Visa-free up to 30 days" },
+    "officialUrl": "https://evisa.imigrasi.go.id/",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "С июля 2026. Безвиз не продлевается: если планируете остаться дольше 30 дней, оформите e-VOA (500 000 IDR) — её можно продлить до 60 дней.",
+      "en": "Since July 2026. The visa exemption cannot be extended: for stays over 30 days, get an e-VOA (IDR 500,000), which can be extended to 60 days."
+    },
+    "source": "https://evisa.imigrasi.go.id/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "id-evisa-c1",
+    "destination": "ID",
+    "appliesTo": { "passports": ["KG"] },
+    "kind": "evisa",
+    "name": { "ru": "Туристическая e-Visa C1 (заранее)", "en": "Tourist e-Visa C1 (in advance)" },
+    "officialUrl": "https://evisa.imigrasi.go.id/",
+    "recommendDaysBeforeArrival": 14,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "С октября 2026 Кыргызстан исключён из списка визы по прилёте. Однократную туристическую e-Visa C1 (бывшая B211A) нужно получить до вылета на официальном портале.",
+      "en": "Since October 2026 Kyrgyzstan is no longer eligible for visa on arrival. Get a single-entry tourist e-Visa C1 (formerly B211A) before departure on the official portal."
+    },
+    "source": "https://evisa.imigrasi.go.id/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "id-all-indonesia",
+    "destination": "ID",
+    "appliesTo": { "passports": "ALL" },
+    "kind": "arrival_card",
+    "name": { "ru": "Карта прибытия All Indonesia", "en": "All Indonesia arrival card" },
+    "officialUrl": "https://allindonesia.imigrasi.go.id/",
+    "fee": { "amount": 0, "currency": "IDR" },
+    "windowHoursBeforeArrival": 72,
+    "notes": {
+      "ru": "Бесплатно, одна форма вместо иммиграционной, таможенной и медицинской деклараций. Есть приложение All Indonesia. Визу не заменяет.",
+      "en": "Free; one form replaces the immigration, customs and health declarations. There is also an All Indonesia app. Does not replace a visa."
+    },
+    "source": "https://allindonesia.imigrasi.go.id/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "id-bali-levy",
+    "destination": "ID",
+    "appliesTo": { "passports": "ALL" },
+    "kind": "levy",
+    "name": { "ru": "Туристический сбор Бали (только для Бали)", "en": "Bali tourist levy (Bali only)" },
+    "officialUrl": "https://lovebali.baliprov.go.id/",
+    "fee": { "amount": 150000, "currency": "IDR" },
+    "notes": {
+      "ru": "Платится один раз за поездку, если едете на Бали. Удобнее оплатить заранее на официальном сайте Love Bali.",
+      "en": "Paid once per trip if you visit Bali. Easiest to pay in advance on the official Love Bali site."
+    },
+    "source": "https://lovebali.baliprov.go.id/",
+    "verifiedAt": "2026-11-09"
+  }
+]

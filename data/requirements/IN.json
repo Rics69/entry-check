@@ -1,0 +1,39 @@
+[
+  {
+    "id": "in-evisa",
+    "destination": "IN",
+    "appliesTo": { "passports": ["RU", "KZ", "BY", "UZ", "KG", "AM", "US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "CA", "AU"] },
+    "kind": "evisa",
+    "name": { "ru": "Электронная туристическая виза (e-Tourist Visa)", "en": "e-Tourist Visa" },
+    "officialUrl": "https://indianvisaonline.gov.in/evisa/",
+    "processing": {
+      "ru": "Обычно до 72 часов; подавать не позже чем за 4 дня до прилёта",
+      "en": "Usually within 72 hours; apply at least 4 days before arrival"
+    },
+    "recommendDaysBeforeArrival": 7,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты прилёта и 2 чистые страницы", "en": "At least 6 months from arrival and 2 blank pages" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "Сбор зависит от гражданства и срока визы. Подавайте только на indianvisaonline.gov.in — сайты-посредники берут наценку.",
+      "en": "The fee depends on nationality and visa length. Apply only at indianvisaonline.gov.in — middleman sites add a markup."
+    },
+    "source": "https://indianvisaonline.gov.in/evisa/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "in-e-arrival",
+    "destination": "IN",
+    "appliesTo": { "passports": "ALL" },
+    "kind": "arrival_card",
+    "name": { "ru": "Электронная карта прибытия (e-Arrival Card)", "en": "e-Arrival Card" },
+    "officialUrl": "https://indianvisaonline.gov.in/earrival/",
+    "fee": { "amount": 0, "currency": "INR" },
+    "windowHoursBeforeArrival": 72,
+    "notes": {
+      "ru": "Бесплатно, подаётся в течение 72 часов до прилёта, отдельно от e-Visa. Также — в приложении Su-Swagatam и на boi.gov.in.",
+      "en": "Free; submit within 72 hours before arrival, separately from the e-Visa. Also available in the Su-Swagatam app and at boi.gov.in."
+    },
+    "source": "https://indianvisaonline.gov.in/earrival/",
+    "verifiedAt": "2026-11-09"
+  }
+]

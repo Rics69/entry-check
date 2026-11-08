@@ -1,0 +1,104 @@
+[
+  {
+    "id": "sch-eu-free-movement",
+    "destination": "SCHENGEN",
+    "appliesTo": { "passports": ["DE", "FR", "IT", "ES", "NL", "PL"] },
+    "kind": "visa_free",
+    "name": { "ru": "Свобода передвижения граждан ЕС", "en": "EU free movement" },
+    "officialUrl": "https://europa.eu/youreurope/citizens/travel/entry-exit/eu-citizen/index_en.htm",
+    "passportValidity": { "ru": "Действующий паспорт или ID-карта", "en": "A valid passport or national ID card" },
+    "notes": { "ru": "EES и ETIAS к гражданам ЕС не применяются.", "en": "EES and ETIAS do not apply to EU citizens." },
+    "source": "https://europa.eu/youreurope/citizens/travel/entry-exit/eu-citizen/index_en.htm",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "sch-visa-free-90",
+    "destination": "SCHENGEN",
+    "appliesTo": { "passports": ["US", "GB", "CA", "AU"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 90 дней в любые 180 дней", "en": "Visa-free up to 90 days in any 180 days" },
+    "officialUrl": "https://travel-europe.europa.eu/en/ees",
+    "stayLimitDays": 90,
+    "passportValidity": {
+      "ru": "Действителен не менее 3 месяцев после выезда из Шенгена и выдан не более 10 лет назад",
+      "en": "Valid for at least 3 months after you leave Schengen and issued within the last 10 years"
+    },
+    "notes": {
+      "ru": "Лимит 90/180 считается по всей Шенгенской зоне, а не по каждой стране.",
+      "en": "The 90/180 limit covers the whole Schengen Area, not each country."
+    },
+    "source": "https://travel-europe.europa.eu/en/ees",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "sch-ees",
+    "destination": "SCHENGEN",
+    "appliesTo": { "passports": ["US", "GB", "CA", "AU", "RU", "KZ", "BY", "UZ", "KG", "AM"] },
+    "kind": "info",
+    "name": { "ru": "EES: отпечатки и фото на границе", "en": "EES: fingerprints and photo at the border" },
+    "officialUrl": "https://travel-europe.europa.eu/en/ees",
+    "fee": { "amount": 0, "currency": "EUR" },
+    "notes": {
+      "ru": "При первом въезде после 10 апреля 2026 на границе снимают фото и отпечатки четырёх пальцев — и по безвизу, и по визе. Бесплатно, заранее ничего делать не нужно. В пик очереди бывают до нескольких часов — закладывайте время.",
+      "en": "On your first entry after 10 April 2026, a photo and four fingerprints are taken at the border — whether you travel visa-free or with a visa. Free, nothing to do in advance. Queues can take hours at peak times — allow extra time."
+    },
+    "source": "https://travel-europe.europa.eu/en/ees",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "sch-etias-pending",
+    "destination": "SCHENGEN",
+    "appliesTo": { "passports": ["US", "GB", "CA", "AU"] },
+    "kind": "info",
+    "name": { "ru": "ETIAS пока не нужен", "en": "ETIAS is not required yet" },
+    "officialUrl": "https://travel-europe.europa.eu/en/etias",
+    "notes": {
+      "ru": "Запуск ETIAS перенесён на апрель 2027. После запуска — переходный и льготный периоды не менее 12 месяцев. Сбор 20 €, до 18 и старше 70 лет — бесплатно. Подавать только на travel-europe.europa.eu.",
+      "en": "ETIAS launch is postponed to April 2027. After launch there will be transition and grace periods of at least 12 months. The fee is €20; free for under-18s and over-70s. Apply only at travel-europe.europa.eu."
+    },
+    "source": "https://travel-europe.europa.eu/en/etias/about-etias/news-corner/revised-timeline-ees-and-etias",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "sch-visa",
+    "destination": "SCHENGEN",
+    "appliesTo": { "passports": ["RU", "KZ", "UZ", "KG"] },
+    "kind": "visa",
+    "name": { "ru": "Нужна шенгенская виза", "en": "Schengen visa required" },
+    "officialUrl": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en",
+    "fee": { "amount": 90, "currency": "EUR" },
+    "processing": { "ru": "Обычно 15 календарных дней, бывает до 45", "en": "Usually 15 calendar days, up to 45" },
+    "recommendDaysBeforeArrival": 60,
+    "passportValidity": {
+      "ru": "Действителен не менее 3 месяцев после выезда из Шенгена и выдан не более 10 лет назад",
+      "en": "Valid for at least 3 months after you leave Schengen and issued within the last 10 years"
+    },
+    "notes": {
+      "ru": "Подаётся в консульстве или визовом центре страны основного пребывания. Дети 6–12 лет — 45 €, до 6 лет — бесплатно. Для России упрощённый визовый режим приостановлен с сентября 2022.",
+      "en": "Apply at the consulate or visa centre of your main destination country. Children aged 6–12 pay €45, under 6 — free. For Russia the visa facilitation agreement has been suspended since September 2022."
+    },
+    "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "sch-visa-facilitated",
+    "destination": "SCHENGEN",
+    "appliesTo": { "passports": ["AM", "BY"] },
+    "kind": "visa",
+    "name": { "ru": "Нужна шенгенская виза (упрощённый режим)", "en": "Schengen visa required (facilitated)" },
+    "officialUrl": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en",
+    "fee": { "amount": 35, "currency": "EUR" },
+    "processing": { "ru": "Обычно 15 календарных дней, бывает до 45", "en": "Usually 15 calendar days, up to 45" },
+    "recommendDaysBeforeArrival": 60,
+    "passportValidity": {
+      "ru": "Действителен не менее 3 месяцев после выезда из Шенгена и выдан не более 10 лет назад",
+      "en": "Valid for at least 3 months after you leave Schengen and issued within the last 10 years"
+    },
+    "notes": {
+      "ru": "Подаётся в консульстве или визовом центре страны основного пребывания. Сбор снижен по соглашению об упрощении визового режима с ЕС; дети до 12 лет, студенты и некоторые другие категории освобождены от сбора.",
+      "en": "Apply at the consulate or visa centre of your main destination country. The fee is reduced under the EU visa facilitation agreement; children under 12, students and some other groups are exempt."
+    },
+    "source": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en",
+    "verifiedAt": "2026-11-09"
+  }
+]

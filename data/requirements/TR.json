@@ -1,0 +1,63 @@
+[
+  {
+    "id": "tr-visa-free-60",
+    "destination": "TR",
+    "appliesTo": { "passports": ["RU"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 60 дней", "en": "Visa-free up to 60 days" },
+    "officialUrl": "https://www.mfa.gov.tr/",
+    "stayLimitDays": 60,
+    "passportValidity": {
+      "ru": "На 60 дней дольше срока пребывания: по закону от 120 дней с даты въезда, рекомендуем 6 месяцев",
+      "en": "60 days beyond your permitted stay: legally at least 120 days from entry, 6 months recommended"
+    },
+    "notes": { "ru": "Не больше 90 дней в любые 180 дней.", "en": "No more than 90 days in any 180-day period." },
+    "source": "https://www.mfa.gov.tr/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "tr-visa-free-90",
+    "destination": "TR",
+    "appliesTo": { "passports": ["KZ", "UZ", "KG"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 90 дней в любые 180 дней", "en": "Visa-free up to 90 days in any 180 days" },
+    "officialUrl": "https://www.mfa.gov.tr/",
+    "stayLimitDays": 90,
+    "passportValidity": {
+      "ru": "На 60 дней дольше срока пребывания: не менее 150 дней с даты въезда",
+      "en": "60 days beyond your permitted stay: at least 150 days from the date of entry"
+    },
+    "source": "https://www.mfa.gov.tr/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "tr-visa-free-30",
+    "destination": "TR",
+    "appliesTo": { "passports": ["BY"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней", "en": "Visa-free up to 30 days" },
+    "officialUrl": "https://www.mfa.gov.tr/",
+    "stayLimitDays": 30,
+    "passportValidity": {
+      "ru": "На 60 дней дольше срока пребывания: не менее 90 дней с даты въезда",
+      "en": "60 days beyond your permitted stay: at least 90 days from the date of entry"
+    },
+    "notes": { "ru": "Не больше 90 дней в течение года с даты первого въезда.", "en": "No more than 90 days within one year of the first entry." },
+    "source": "https://www.mfa.gov.tr/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "tr-evisa",
+    "destination": "TR",
+    "appliesTo": { "passports": ["AM"] },
+    "kind": "evisa",
+    "name": { "ru": "Электронная виза Турции", "en": "Türkiye e-Visa" },
+    "officialUrl": "https://www.evisa.gov.tr/",
+    "processing": { "ru": "Обычно сразу после оплаты", "en": "Usually issued right after payment" },
+    "recommendDaysBeforeArrival": 3,
+    "passportValidity": { "ru": "Не менее 150 дней с даты въезда", "en": "At least 150 days from the date of entry" },
+    "notes": { "ru": "Официальный сайт только evisa.gov.tr.", "en": "The only official site is evisa.gov.tr." },
+    "source": "https://www.evisa.gov.tr/",
+    "verifiedAt": "2026-11-09"
+  }
+]

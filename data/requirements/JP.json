@@ -1,0 +1,33 @@
+[
+  {
+    "id": "jp-visa-free-90",
+    "destination": "JP",
+    "appliesTo": { "passports": ["US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "CA", "AU"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 90 дней", "en": "Visa-free up to 90 days" },
+    "officialUrl": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html",
+    "stayLimitDays": 90,
+    "passportValidity": { "ru": "Действителен на весь срок пребывания", "en": "Valid for the whole stay" },
+    "notes": {
+      "ru": "Только краткосрочный визит: туризм, бизнес-встречи, гости. Работать нельзя.",
+      "en": "Short-term stay only: tourism, business meetings, visiting. No paid work."
+    },
+    "source": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "jp-visit-japan-web",
+    "destination": "JP",
+    "appliesTo": { "passports": "ALL" },
+    "kind": "info",
+    "name": { "ru": "Visit Japan Web — по желанию", "en": "Visit Japan Web — optional" },
+    "officialUrl": "https://vjw-lp.digital.go.jp/en/",
+    "fee": { "amount": 0, "currency": "JPY" },
+    "notes": {
+      "ru": "Заполните иммиграционную и таможенную формы заранее и получите QR-коды — так быстрее на границе. Бумажные формы в самолёте тоже принимают.",
+      "en": "Fill in the immigration and customs forms in advance and get QR codes for a faster border crossing. Paper forms on the plane are still accepted."
+    },
+    "source": "https://vjw-lp.digital.go.jp/en/",
+    "verifiedAt": "2026-11-09"
+  }
+]

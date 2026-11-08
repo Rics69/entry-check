@@ -1,0 +1,73 @@
+{
+  "TH": [
+    { "domain": "immigration.go.th", "label": { "ru": "Иммиграционное бюро Таиланда (TDAC)", "en": "Thai Immigration Bureau (TDAC)" } },
+    { "domain": "thaievisa.go.th", "label": { "ru": "Официальный e-Visa Таиланда", "en": "Thailand official e-Visa" } },
+    { "domain": "mfa.go.th", "label": { "ru": "МИД Таиланда", "en": "Ministry of Foreign Affairs of Thailand" } },
+    { "domain": "tatnews.org", "label": { "ru": "Управление по туризму Таиланда (TAT)", "en": "Tourism Authority of Thailand (TAT)" } }
+  ],
+  "VN": [
+    { "domain": "evisa.gov.vn", "label": { "ru": "Официальный e-Visa Вьетнама", "en": "Vietnam official e-Visa" } },
+    { "domain": "immigration.gov.vn", "label": { "ru": "Иммиграционный департамент Вьетнама", "en": "Vietnam Immigration Department" } },
+    { "domain": "xuatnhapcanh.gov.vn", "label": { "ru": "Иммиграционный департамент Вьетнама", "en": "Vietnam Immigration Department" } },
+    { "domain": "mofa.gov.vn", "label": { "ru": "МИД Вьетнама", "en": "Ministry of Foreign Affairs of Viet Nam" } }
+  ],
+  "ID": [
+    { "domain": "imigrasi.go.id", "label": { "ru": "Иммиграционная служба Индонезии (e-VOA, All Indonesia)", "en": "Indonesian Immigration (e-VOA, All Indonesia)" } },
+    { "domain": "baliprov.go.id", "label": { "ru": "Правительство провинции Бали (туристический сбор)", "en": "Bali Provincial Government (tourist levy)" } }
+  ],
+  "TR": [
+    { "domain": "evisa.gov.tr", "label": { "ru": "Официальный e-Visa Турции", "en": "Türkiye official e-Visa" } },
+    { "domain": "mfa.gov.tr", "label": { "ru": "МИД Турции", "en": "Ministry of Foreign Affairs of Türkiye" } }
+  ],
+  "AE": [
+    { "domain": "u.ae", "label": { "ru": "Официальный портал правительства ОАЭ", "en": "UAE Government official portal" } },
+    { "domain": "icp.gov.ae", "label": { "ru": "Федеральное управление ICP ОАЭ", "en": "UAE Federal Authority (ICP)" } },
+    { "domain": "gdrfad.gov.ae", "label": { "ru": "Управление резидентства и по делам иностранцев Дубая", "en": "GDRFA Dubai" } }
+  ],
+  "EG": [
+    { "domain": "visa2egypt.gov.eg", "label": { "ru": "Официальный e-Visa Египта", "en": "Egypt official e-Visa" } },
+    { "domain": "mfa.gov.eg", "label": { "ru": "МИД Египта", "en": "Ministry of Foreign Affairs of Egypt" } }
+  ],
+  "LK": [
+    { "domain": "eta.gov.lk", "label": { "ru": "Официальный ETA Шри-Ланки", "en": "Sri Lanka official ETA" } },
+    { "domain": "immigration.gov.lk", "label": { "ru": "Департамент иммиграции Шри-Ланки", "en": "Sri Lanka Department of Immigration" } }
+  ],
+  "MY": [
+    { "domain": "imi.gov.my", "label": { "ru": "Иммиграционный департамент Малайзии (MDAC)", "en": "Immigration Department of Malaysia (MDAC)" } }
+  ],
+  "IN": [
+    { "domain": "indianvisaonline.gov.in", "label": { "ru": "Официальный e-Visa и e-Arrival Card Индии", "en": "India official e-Visa and e-Arrival Card" } },
+    { "domain": "boi.gov.in", "label": { "ru": "Бюро иммиграции Индии", "en": "Bureau of Immigration, India" } },
+    { "domain": "mea.gov.in", "label": { "ru": "МИД Индии", "en": "Ministry of External Affairs of India" } }
+  ],
+  "CN": [
+    { "domain": "mfa.gov.cn", "label": { "ru": "МИД КНР, консульская служба", "en": "Ministry of Foreign Affairs of China, consular service" } },
+    { "domain": "nia.gov.cn", "label": { "ru": "Национальная иммиграционная администрация КНР", "en": "National Immigration Administration of China" } },
+    { "domain": "shanghai.gov.cn", "label": { "ru": "Правительство Шанхая", "en": "Shanghai Municipal Government" } }
+  ],
+  "GB": [
+    { "domain": "gov.uk", "label": { "ru": "Правительство Великобритании (ETA, визы)", "en": "UK Government (ETA, visas)" } }
+  ],
+  "SCHENGEN": [
+    { "domain": "europa.eu", "label": { "ru": "Официальные сайты ЕС (EES, ETIAS, визы)", "en": "Official EU websites (EES, ETIAS, visas)" } }
+  ],
+  "SG": [
+    { "domain": "ica.gov.sg", "label": { "ru": "Иммиграционное управление Сингапура (SG Arrival Card)", "en": "Singapore ICA (SG Arrival Card)" } }
+  ],
+  "KR": [
+    { "domain": "k-eta.go.kr", "label": { "ru": "Официальный K-ETA", "en": "Official K-ETA" } },
+    { "domain": "e-arrivalcard.go.kr", "label": { "ru": "Официальная e-Arrival Card Кореи", "en": "Korea official e-Arrival Card" } },
+    { "domain": "hikorea.go.kr", "label": { "ru": "HiKorea — иммиграционный портал", "en": "HiKorea immigration portal" } },
+    { "domain": "mofa.go.kr", "label": { "ru": "МИД Республики Корея", "en": "Ministry of Foreign Affairs of Korea" } }
+  ],
+  "JP": [
+    { "domain": "digital.go.jp", "label": { "ru": "Visit Japan Web (Цифровое агентство Японии)", "en": "Visit Japan Web (Digital Agency of Japan)" } },
+    { "domain": "mofa.go.jp", "label": { "ru": "МИД Японии", "en": "Ministry of Foreign Affairs of Japan" } },
+    { "domain": "moj.go.jp", "label": { "ru": "Иммиграционное агентство Японии", "en": "Immigration Services Agency of Japan" } }
+  ],
+  "US": [
+    { "domain": "cbp.dhs.gov", "label": { "ru": "Официальный ESTA (CBP)", "en": "Official ESTA (CBP)" } },
+    { "domain": "cbp.gov", "label": { "ru": "Таможенно-пограничная служба США", "en": "U.S. Customs and Border Protection" } },
+    { "domain": "state.gov", "label": { "ru": "Госдепартамент США (визы)", "en": "U.S. Department of State (visas)" } }
+  ]
+}

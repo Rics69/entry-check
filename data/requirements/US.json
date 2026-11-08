@@ -1,0 +1,53 @@
+[
+  {
+    "id": "us-esta",
+    "destination": "US",
+    "appliesTo": { "passports": ["GB", "DE", "FR", "IT", "ES", "NL", "PL", "AU"] },
+    "kind": "eta",
+    "name": { "ru": "Электронное разрешение ESTA", "en": "ESTA travel authorization" },
+    "officialUrl": "https://esta.cbp.dhs.gov/",
+    "fee": { "amount": 40, "currency": "USD" },
+    "processing": { "ru": "Часто сразу, но может занять до 72 часов", "en": "Often immediate, but can take up to 72 hours" },
+    "recommendDaysBeforeArrival": 7,
+    "stayLimitDays": 90,
+    "passportValidity": { "ru": "Биометрический паспорт, действительный на весь срок пребывания", "en": "A biometric e-passport valid for the whole stay" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "Нужна и при пересадке в США. Действует 2 года. Подавайте только на esta.cbp.dhs.gov — сайты-посредники берут в несколько раз больше.",
+      "en": "Needed even when connecting in the US. Valid for 2 years. Apply only at esta.cbp.dhs.gov — middleman sites charge several times more."
+    },
+    "appliesToTransit": true,
+    "source": "https://esta.cbp.dhs.gov/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "us-ca-visa-free",
+    "destination": "US",
+    "appliesTo": { "passports": ["CA"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы и без ESTA", "en": "No visa or ESTA needed" },
+    "officialUrl": "https://www.cbp.gov/travel/canadian-and-mexican-citizens",
+    "stayLimitDays": 180,
+    "passportValidity": { "ru": "Действителен на весь срок пребывания", "en": "Valid for the whole stay" },
+    "notes": {
+      "ru": "Гражданам Канады для туризма обычно разрешено находиться до 6 месяцев.",
+      "en": "Canadian citizens are usually admitted for up to 6 months as visitors."
+    },
+    "source": "https://www.cbp.gov/travel/canadian-and-mexican-citizens",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "us-visa",
+    "destination": "US",
+    "appliesTo": { "passports": ["RU", "KZ", "BY", "UZ", "KG", "AM"] },
+    "kind": "visa",
+    "name": { "ru": "Нужна виза B1/B2", "en": "B1/B2 visa required" },
+    "officialUrl": "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html",
+    "processing": { "ru": "Зависит от очереди на собеседование: от недель до месяцев", "en": "Depends on interview wait times: weeks to months" },
+    "recommendDaysBeforeArrival": 90,
+    "passportValidity": { "ru": "Не менее 6 месяцев после окончания поездки", "en": "At least 6 months beyond your stay" },
+    "appliesToTransit": true,
+    "source": "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html",
+    "verifiedAt": "2026-11-09"
+  }
+]

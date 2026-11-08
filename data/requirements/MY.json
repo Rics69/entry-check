@@ -1,0 +1,44 @@
+[
+  {
+    "id": "my-visa-free-30",
+    "destination": "MY",
+    "appliesTo": { "passports": ["RU", "KZ", "BY", "UZ", "KG", "AM"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней", "en": "Visa-free up to 30 days" },
+    "officialUrl": "https://www.imi.gov.my/",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "source": "https://www.imi.gov.my/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "my-visa-free-90",
+    "destination": "MY",
+    "appliesTo": { "passports": ["US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "CA", "AU"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 90 дней", "en": "Visa-free up to 90 days" },
+    "officialUrl": "https://www.imi.gov.my/",
+    "stayLimitDays": 90,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "source": "https://www.imi.gov.my/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "my-mdac",
+    "destination": "MY",
+    "appliesTo": { "passports": "ALL" },
+    "kind": "arrival_card",
+    "name": { "ru": "Цифровая карта прибытия MDAC", "en": "Malaysia Digital Arrival Card (MDAC)" },
+    "officialUrl": "https://imigresen-online.imi.gov.my/mdac/main",
+    "fee": { "amount": 0, "currency": "MYR" },
+    "windowHoursBeforeArrival": 72,
+    "notes": {
+      "ru": "Бесплатно, подаётся за 3 дня до прилёта. Не нужна при пересадке без прохождения паспортного контроля.",
+      "en": "Free; submit within 3 days before arrival. Not needed if you transit without passing passport control."
+    },
+    "source": "https://imigresen-online.imi.gov.my/mdac/main",
+    "verifiedAt": "2026-11-09"
+  }
+]
