@@ -138,3 +138,45 @@ html {
     animation: none;
   }
 }
+
+/* Попап проверки: лёгкое появление фона и листа снизу. */
+@keyframes ec-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes ec-sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+.ec-backdrop {
+  animation: ec-fade-in 160ms ease-out;
+}
+
+.ec-sheet {
+  animation: ec-sheet-in 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ec-backdrop,
+  .ec-sheet {
+    animation: none;
+  }
+}
+
+/* Печать результата: A4, без шапки, кнопок и фона. */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+  html,
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { useId, useState, type FormEvent } from "react";
+import { track } from "@/lib/analytics";
 import { findOfficialDomain, hostnameOf, suggestZonesForHost, type OfficialMatch } from "@/lib/rules/official";
 import type { ZoneCode } from "@/lib/rules/types";
 import { ArrowUpRightIcon, CheckIcon } from "../icons";
@@ -40,8 +41,13 @@ export function SiteCheck({
     const host = hostnameOf(input);
     if (!host) return setResult({ type: "invalid" });
     const match = findOfficialDomain(input);
-    if (match) return setResult({ type: "official", host, match });
-    setResult({ type: "unknown", host, zones: suggestZonesForHost(host) });
+    if (match) {
+      track("site_check", { result: "official", host, zone: match.zone });
+      return setResult({ type: "official", host, match });
+    }
+    const zones = suggestZonesForHost(host);
+    track("site_check", { result: "unknown", host, zone: zones.join(",") });
+    setResult({ type: "unknown", host, zones });
   }
 
   function onSubmit(event: FormEvent) {

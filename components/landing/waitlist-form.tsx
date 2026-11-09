@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { useId, useState, type FormEvent } from "react";
+import { track } from "@/lib/analytics";
 
 type State = "idle" | "sending" | "success" | "error" | "invalid";
 
@@ -27,6 +28,7 @@ export function WaitlistForm({ submitLabel, source }: { submitLabel: string; sou
         body: JSON.stringify({ email: email.trim(), locale, source, website: honeypot }),
       });
       setState(response.ok ? "success" : "error");
+      if (response.ok) track("pass_waitlist", { source });
     } catch {
       setState("error");
     }

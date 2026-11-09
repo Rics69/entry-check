@@ -27,7 +27,7 @@ export function StopCard({ stop, index }: { stop: StopResult; index: number }) {
   )}`;
 
   return (
-    <article className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface">
+    <article className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface break-inside-avoid">
       <span className={`absolute inset-y-0 left-0 w-1 ${STATUS_STYLES[stop.status].bar}`} aria-hidden="true" />
 
       <header className="flex flex-wrap items-start justify-between gap-3 p-5 pl-6">
@@ -53,7 +53,7 @@ export function StopCard({ stop, index }: { stop: StopResult; index: number }) {
         {stop.status === "unknown" && !stop.home && (
           <div className="p-5 pl-6 text-sm leading-relaxed">
             <p>{t("unknownHint")}</p>
-            {stop.portalUrl && <OfficialLink url={stop.portalUrl} label={t("officialPortal")} />}
+            {stop.portalUrl && <OfficialLink url={stop.portalUrl} label={t("officialPortal")} zone={stop.zone} />}
           </div>
         )}
 
@@ -74,7 +74,7 @@ export function StopCard({ stop, index }: { stop: StopResult; index: number }) {
             <span>
               {stop.verifiedAt ? t("verified", { date: formatDay(stop.verifiedAt, locale, true) }) : t("draft")}
             </span>
-            <a href={reportHref} className="text-accent hover:underline">
+            <a href={reportHref} className="text-accent hover:underline print:hidden">
               {t("report")}
             </a>
           </p>
@@ -124,9 +124,17 @@ function RequirementRow({ item, stop }: { item: RequirementItem; stop: StopResul
 
       {rule.notes && <p className="mt-3 text-sm leading-relaxed text-muted">{rule.notes[lang]}</p>}
 
-      {!isInfo && <OfficialLink url={rule.officialUrl} label={t("official")} />}
+      {!isInfo && <OfficialLink url={rule.officialUrl} label={t("official")} zone={stop.zone} rule={rule.id} />}
       {isInfo && (
-        <a href={rule.officialUrl} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm text-accent hover:underline">
+        <a
+          href={rule.officialUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track="official_click"
+          data-zone={stop.zone ?? undefined}
+          data-rule={rule.id}
+          className="mt-2 inline-block text-sm text-accent hover:underline"
+        >
           {displayHost(rule.officialUrl)} ↗
         </a>
       )}
@@ -176,12 +184,15 @@ function Timing({ item, stop }: { item: RequirementItem; stop: StopResult }) {
   return null;
 }
 
-function OfficialLink({ url, label }: { url: string; label: string }) {
+function OfficialLink({ url, label, zone, rule }: { url: string; label: string; zone: string | null; rule?: string }) {
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
+      data-track="official_click"
+      data-zone={zone ?? undefined}
+      data-rule={rule}
       className="group mt-4 flex min-h-11 w-full items-center justify-between gap-3 rounded-lg border border-border-strong px-3.5 py-2 text-sm transition-colors hover:border-accent"
     >
       <span className="flex min-w-0 flex-col">

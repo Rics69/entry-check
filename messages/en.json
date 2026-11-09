@@ -216,6 +216,66 @@
       "nothing": "nothing to arrange"
     }
   },
+  "check": {
+    "title": "Trip check",
+    "step": "Step {current} of {total}",
+    "close": "Close",
+    "passport": {
+      "title": "Which passport do you hold?",
+      "search": "Find a country",
+      "popular": "Popular",
+      "all": "All passports",
+      "empty": "Nothing found.",
+      "missing": "Don’t see your passport? We add countries on request — <link>email us</link>."
+    },
+    "route": {
+      "title": "Where are you flying?",
+      "subtitle": "Add every country in order, connections included.",
+      "passport": "Passport: {country}",
+      "changePassport": "Change",
+      "stop": "Stop {n}",
+      "country": "Country",
+      "chooseCountry": "Choose a country",
+      "popular": "Popular",
+      "all": "All countries",
+      "date": "Arrival date",
+      "time": "Arrival time",
+      "optional": "optional",
+      "timeHint": "Helps us work out exactly when the filing window opens.",
+      "mode": "What you do in this country",
+      "entering": "Entering",
+      "transit": "Connection only",
+      "transitHint": "I stay in the airport transit area.",
+      "add": "Add a country",
+      "remove": "Remove stop {n}",
+      "submit": "Show requirements",
+      "back": "Back",
+      "missingCountry": "Missing a country? <link>Email us</link> and we’ll add it."
+    },
+    "errors": {
+      "country": "Choose a country",
+      "date": "Enter your arrival date",
+      "past": "This date has already passed",
+      "far": "Enter a date within the next 2 years"
+    }
+  },
+  "tripPage": {
+    "title": "Your trip",
+    "metaTitle": "Your trip — Entry Check",
+    "passport": "Passport: {country}",
+    "edit": "Edit trip",
+    "copy": "Copy link",
+    "copied": "Link copied",
+    "share": "Share",
+    "shareText": "Entry requirements: {route}",
+    "print": "Print",
+    "loading": "Working out the requirements…",
+    "invalidTitle": "This trip link is broken",
+    "invalidText": "Check your route again — it takes 30 seconds.",
+    "checkAgain": "Check my trip",
+    "recheck": "Rules change. Check your route again 72 hours before departure.",
+    "disclaimer": "Reference information, not legal advice. You file applications yourself on official websites."
+  },
   "legal": {
     "edition": "Version of {date}",
     "back": "Back to home",

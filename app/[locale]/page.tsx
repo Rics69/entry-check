@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { BellIcon, CheckIcon, ListIcon, RouteIcon, ShieldIcon } from "@/components/icons";
+import { ClientMessages } from "@/components/client-messages";
 import { LiveCard } from "@/components/landing/live-card";
 import { SiteCheck, type PortalLink } from "@/components/landing/site-check";
 import { WaitlistForm } from "@/components/landing/waitlist-form";
@@ -134,7 +135,9 @@ export default function HomePage({ params }: PageProps<"/[locale]">) {
             <p className="mt-3 text-lg leading-relaxed text-muted">{t("siteCheck.subtitle")}</p>
             <p className="mt-6 border-l-2 border-warn pl-4 text-sm leading-relaxed text-muted">{t("siteCheck.why")}</p>
           </div>
-          <SiteCheck portals={buildPortals(locale)} zoneNames={zoneNames} />
+          <ClientMessages namespaces={["siteCheck"]}>
+            <SiteCheck portals={buildPortals(locale)} zoneNames={zoneNames} />
+          </ClientMessages>
         </div>
       </section>
 
@@ -168,7 +171,9 @@ export default function HomePage({ params }: PageProps<"/[locale]">) {
             <PlanCard name={t("pricing.pass.name")} badge={t("pricing.pass.badge")} muted>
               <p className="leading-relaxed text-muted">{t("pricing.pass.text")}</p>
               <div className="mt-6">
-                <WaitlistForm submitLabel={t("pricing.pass.cta")} source="pricing" />
+                <ClientMessages namespaces={["waitlist"]}>
+                  <WaitlistForm submitLabel={t("pricing.pass.cta")} source="pricing" />
+                </ClientMessages>
               </div>
             </PlanCard>
           </div>

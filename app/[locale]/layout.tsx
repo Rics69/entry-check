@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { Analytics } from "@/components/analytics";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { routing } from "@/i18n/routing";
@@ -14,8 +15,8 @@ const geistSans = Geist({
   subsets: ["latin", "cyrillic"],
 });
 
-/** Разделы переводов, которые используют клиентские компоненты ("use client"). */
-const CLIENT_NAMESPACES = ["header", "siteCheck", "waitlist"] as const;
+/** Разделы переводов для клиентских компонентов шапки. Страницы добавляют свои через <ClientMessages>. */
+const CLIENT_NAMESPACES = ["header"] as const;
 
 function pick<T extends Record<string, unknown>>(source: T, keys: readonly string[]): Partial<T> {
   return Object.fromEntries(keys.filter((k) => k in source).map((k) => [k, source[k]])) as Partial<T>;
@@ -53,6 +54,7 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
+  modal,
   params,
 }: LayoutProps<"/[locale]">) {
   const { locale } = await params;
@@ -65,13 +67,16 @@ export default async function LocaleLayout({
   const clientMessages = pick(messages, CLIENT_NAMESPACES);
 
   return (
-    <html lang={locale} className={`${geistSans.variable} h-full antialiased`}>
+    <html lang={locale} data-scroll-behavior="smooth" className={`${geistSans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
         <NextIntlClientProvider messages={clientMessages}>
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
         </NextIntlClientProvider>
+        {/* Попап проверки маршрута (перехват /check), см. app/[locale]/@modal. */}
+        {modal}
+        <Analytics />
       </body>
     </html>
   );

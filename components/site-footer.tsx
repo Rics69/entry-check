@@ -10,7 +10,7 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer className="border-t border-border bg-surface print:hidden">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 text-sm text-muted">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <Link href="/" className="flex items-center gap-2 text-foreground">
