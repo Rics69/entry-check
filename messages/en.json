@@ -5,17 +5,221 @@
   },
   "header": {
     "home": "Entry Check — home",
-    "language": "Language"
+    "language": "Language",
+    "nav": {
+      "how": "How it works",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "label": "Page sections"
+    },
+    "cta": "Check my trip"
   },
   "footer": {
     "disclaimer": "Reference information, not legal advice. You file applications yourself on official websites.",
-    "copyright": "© {year} Entry Check"
+    "copyright": "© {year} Entry Check",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "refunds": "Refunds",
+    "contacts": "Contact",
+    "payments": "Payments: Visa, Mastercard",
+    "legalNav": "Legal"
   },
-  "home": {
-    "title": "Everything you need to enter. On one screen.",
-    "subtitle": "Passport + route → visas, ETAs, arrival cards and passport rules for every stop. Official links only.",
-    "cta": "Check my trip",
-    "ctaNote": "Free · 30 seconds · no sign-up"
+  "landing": {
+    "hero": {
+      "eyebrow": "Visas, ETAs and arrival cards — from official sources",
+      "title": "Everything you need to enter. On one screen.",
+      "subtitle": "Passport + route → visas, ETAs, arrival cards and passport rules for every stop. Official links only.",
+      "cta": "Check my trip",
+      "ctaNote": "Free · 30 seconds · no sign-up",
+      "points": {
+        "official": "Government domains only",
+        "verified": "Verification date on every card",
+        "noMarkup": "No markup on government fees"
+      }
+    },
+    "live": {
+      "label": "Sample check",
+      "passport": "Passport: {country}",
+      "checking": "Checking…",
+      "and": "{first} + {second}"
+    },
+    "how": {
+      "title": "How it works",
+      "steps": {
+        "route": {
+          "title": "Enter your route",
+          "text": "Citizenship, countries and dates, connections included. 30 seconds, no sign-up."
+        },
+        "list": {
+          "title": "Get the list",
+          "text": "One card per stop: what to get, where and how much. Links to government sites only."
+        },
+        "remind": {
+          "title": "File on time",
+          "text": "We remind you when the filing window opens and re-check your route 72 hours before departure."
+        }
+      }
+    },
+    "sample": {
+      "title": "What you get",
+      "subtitle": "Real rules for a sample route — with our verification date on every card.",
+      "route": "Passport: {passport} · {route}"
+    },
+    "siteCheck": {
+      "title": "Check a website",
+      "subtitle": "Paste a link — we’ll tell you if it’s the official portal or a middleman. We match it against our list of government domains, no guessing.",
+      "why": "Thailand’s Immigration Bureau says at least 10% of visitors pay middlemen for its free arrival card."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "subtitle": "The check is always free. Pay only if you want us to see you through to the border.",
+      "free": {
+        "name": "Trip check",
+        "price": "Free",
+        "features": {
+          "all": "Every requirement for your route on one screen",
+          "official": "Official links only, with verification date",
+          "share": "A link you can send to your travel companions"
+        },
+        "cta": "Check my trip"
+      },
+      "tripPack": {
+        "name": "Trip Pack",
+        "per": "per trip",
+        "badge": "Popular",
+        "features": {
+          "pdf": "Printable PDF checklist",
+          "remind": "Reminders when filing windows open",
+          "recheck": "Re-check 72 hours before departure",
+          "changes": "An email if the rules change"
+        },
+        "cta": "Start with a free check",
+        "note": "You buy it after checking your route"
+      },
+      "pass": {
+        "name": "Traveler Pass",
+        "badge": "Coming soon",
+        "text": "Unlimited trips and up to 5 people with different passports — for less than three Trip Packs.",
+        "cta": "Notify me at launch"
+      }
+    },
+    "guarantee": {
+      "title": "Guarantee",
+      "text": "If we missed a required document or linked to a site that isn’t official, we refund you the same day.",
+      "process": "Just reply to our email — that’s the whole process."
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": {
+        "gov": {
+          "q": "Is this a government website?",
+          "a": "No. Entry Check is an independent reference service. We gather the requirements for your route and send you to the official sites, where you file yourself."
+        },
+        "apply": {
+          "q": "Do you file applications for me?",
+          "a": "No. You file on the official website and pay the fee directly to the government — with no markup from us."
+        },
+        "data": {
+          "q": "Where does the data come from, and how fresh is it?",
+          "a": "Only from official sources: immigration authorities, foreign ministries and embassies. A person verifies every rule, and the verification date is on every card. We re-check rules for our main countries at least every 30 days."
+        },
+        "pack": {
+          "q": "What’s in the Trip Pack?",
+          "a": "A printable PDF checklist, email reminders the moment each filing window opens, a re-check of your route 72 hours before departure, and an email if the rules change after you buy."
+        },
+        "changes": {
+          "q": "What if the rules change after I buy?",
+          "a": "We monitor official sources. If a rule for your route changes, we email you what changed and what to do now."
+        },
+        "refund": {
+          "q": "How do I get a refund?",
+          "a": "Reply to any of our emails. If we missed a required document or a link turned out not to be official, we refund you the same day. Details in our <link>refund policy</link>."
+        }
+      }
+    },
+    "final": {
+      "title": "Check your trip now — it’s free",
+      "cta": "Check my trip"
+    }
+  },
+  "siteCheck": {
+    "label": "Website address",
+    "placeholder": "e.g. tdac.immigration.go.th",
+    "submit": "Check",
+    "examples": "Try:",
+    "official": "Official website",
+    "officialText": "{label} · {country}. You can file here.",
+    "notFound": "This address is not on our list of official portals",
+    "notFoundText": "It’s most likely a middleman: such sites charge for free forms or add a markup to the government fee.",
+    "suggest": "Official websites — {country}:",
+    "invalid": "That doesn’t look like a website address. Paste a link or a domain."
+  },
+  "waitlist": {
+    "label": "Email",
+    "placeholder": "you@example.com",
+    "submit": "Notify me",
+    "sending": "Sending…",
+    "success": "Done! We’ll email you when Traveler Pass launches.",
+    "error": "Couldn’t send. Please try again.",
+    "invalid": "Please check your email address.",
+    "privacy": "Just one launch email, no newsletters."
+  },
+  "trip": {
+    "status": {
+      "green": "Nothing needed",
+      "yellow": "Form needed",
+      "red": "Permit needed",
+      "unknown": "No data"
+    },
+    "kind": {
+      "visa_free": "Visa-free",
+      "eta": "Travel authorisation",
+      "evisa": "e-Visa",
+      "visa_on_arrival": "Visa on arrival",
+      "visa": "Visa",
+      "arrival_card": "Arrival card",
+      "levy": "Levy",
+      "info": "Good to know"
+    },
+    "arrival": "arriving {date}",
+    "transit": "connection",
+    "home": "This is your country of citizenship — nothing is needed to enter.",
+    "unknownHint": "We haven’t verified the rules for this combination yet. Please check the official portal:",
+    "officialPortal": "Official portal",
+    "official": "Official website",
+    "fee": "Fee",
+    "free": "Free",
+    "stay": "Stay",
+    "stayDays": "up to {days, plural, one {# day} other {# days}}",
+    "processing": "Processing",
+    "windowOpensAt": "Filing opens {date} local time",
+    "windowOpensOn": "Filing opens {date}",
+    "windowOpen": "Filing is open — submit before you arrive",
+    "windowClosed": "The filing window has closed",
+    "windowRuleHours": "Submit no earlier than {hours} hours before arrival.",
+    "windowRuleDays": "Submit within the last {days, plural, one {# day} other {# days}} before arrival, including arrival day, local time.",
+    "windowEstimated": "Add your arrival time and we’ll give you the exact hour.",
+    "applyBy": "Apply by {date}",
+    "passport": "Passport",
+    "onward": "You may be asked for a return or onward ticket.",
+    "verified": "Verified {date}",
+    "draft": "Draft — this rule is not verified yet",
+    "report": "Report an error",
+    "reportSubject": "Error in rules",
+    "summary": {
+      "stops": "{count, plural, one {# country} other {# countries}}",
+      "permits": "{count, plural, one {# permit} other {# permits}} in advance",
+      "payOnArrival": "{count, plural, one {# paid visa} other {# paid visas}} on arrival",
+      "forms": "{count, plural, one {# arrival card} other {# arrival cards}}",
+      "levies": "{count, plural, one {# levy} other {# levies}}",
+      "unknown": "{count, plural, one {# country} other {# countries}} without data",
+      "nothing": "nothing to arrange"
+    }
+  },
+  "legal": {
+    "edition": "Version of {date}",
+    "back": "Back to home",
+    "draftNotice": "Draft document: a lawyer will review it before payments launch."
   },
   "notFound": {
     "title": "Page not found",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { routing } from "@/i18n/routing";
@@ -13,6 +13,13 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin", "cyrillic"],
 });
+
+/** Разделы переводов, которые используют клиентские компоненты ("use client"). */
+const CLIENT_NAMESPACES = ["header", "siteCheck", "waitlist"] as const;
+
+function pick<T extends Record<string, unknown>>(source: T, keys: readonly string[]): Partial<T> {
+  return Object.fromEntries(keys.filter((k) => k in source).map((k) => [k, source[k]])) as Partial<T>;
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -53,10 +60,14 @@ export default async function LocaleLayout({
   // Включает статическую генерацию: next-intl берёт язык из параметра, а не из заголовков.
   setRequestLocale(locale);
 
+  // В браузер — только тексты клиентских компонентов, а не все переводы сайта.
+  const messages = await getMessages();
+  const clientMessages = pick(messages, CLIENT_NAMESPACES);
+
   return (
     <html lang={locale} className={`${geistSans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
-        <NextIntlClientProvider>
+        <NextIntlClientProvider messages={clientMessages}>
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />

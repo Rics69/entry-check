@@ -45,3 +45,33 @@ export function isOfficialUrlFor(url: string, zone: ZoneCode): boolean {
 export function officialDomainsOf(zone: ZoneCode): OfficialDomain[] {
   return DOMAINS[zone] ?? [];
 }
+
+/**
+ * По неофициальному адресу угадываем, какую страну ищет человек, чтобы показать настоящий портал:
+ * "thailand-tdac-online.com" → TH, "esta-usa.org" → US. Короткие ключи — только целым словом.
+ */
+const ZONE_KEYWORDS: [ZoneCode, string[]][] = [
+  ["TH", ["thai", "tdac"]],
+  ["VN", ["vietnam", "viet"]],
+  ["ID", ["indonesia", "bali", "evoa"]],
+  ["TR", ["turkey", "turkiye", "turk"]],
+  ["AE", ["uae", "dubai", "emirates"]],
+  ["EG", ["egypt"]],
+  ["LK", ["lanka", "ceylon"]],
+  ["MY", ["malaysia", "mdac"]],
+  ["IN", ["india"]],
+  ["CN", ["china", "chinese"]],
+  ["GB", ["uk", "britain", "british", "uketa"]],
+  ["SCHENGEN", ["etias", "schengen", "europe", "eu"]],
+  ["SG", ["singapore", "sgac", "sgarrival"]],
+  ["KR", ["korea", "keta"]],
+  ["JP", ["japan", "vjw"]],
+  ["US", ["esta", "usa", "america", "us"]],
+];
+
+export function suggestZonesForHost(host: string): ZoneCode[] {
+  const tokens = host.toLowerCase().split(/[.\-_]/).filter(Boolean);
+  return ZONE_KEYWORDS.filter(([, words]) =>
+    words.some((word) => tokens.some((token) => (word.length <= 3 ? token === word : token.includes(word)))),
+  ).map(([zone]) => zone);
+}

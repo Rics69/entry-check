@@ -90,3 +90,51 @@ body {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+ * «Живая карточка» на первом экране: «Проверяем…» гаснет, статус появляется.
+ * Задержка — в --delay у родителя. Без движения — сразу итог.
+ */
+@keyframes ec-fade-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes ec-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.ec-pending {
+  animation: ec-fade-out 180ms ease-out var(--delay, 0ms) forwards;
+}
+
+.ec-reveal {
+  opacity: 0;
+  animation: ec-pop-in 320ms cubic-bezier(0.2, 0.8, 0.2, 1) var(--delay, 0ms) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .ec-pending {
+    display: none;
+  }
+  .ec-reveal {
+    opacity: 1;
+    animation: none;
+  }
+}
