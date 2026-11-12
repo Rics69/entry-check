@@ -75,6 +75,7 @@
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 html {
@@ -93,6 +94,246 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/*
+ * Движение: свои кривые вместо встроенных (встроенные слишком вялые).
+ * ease-out — для появления и отклика, ease-in-out — для перемещения по экрану.
+ */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Отклик на нажатие: всё, что нажимается, чуть «проседает». */
+@utility press {
+  transition-property: transform, color, background-color, border-color, box-shadow, opacity;
+  transition-duration: 160ms;
+  transition-timing-function: var(--ease-out);
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+/* Серебристый текст — запасной вариант металлического логотипа (до первого кадра шейдера или без WebGL2). */
+.metal-text {
+  background: linear-gradient(180deg, #f4f4f6 0%, #9a9aa3 38%, #2a2a2e 52%, #b9b9c2 70%, #ececf0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* На светлом фоне светлые блики металла сливаются с фоном — тонкая тень держит контур букв. */
+.metal-shadow,
+.metal-text {
+  filter: drop-shadow(0 0.5px 0.6px rgb(0 0 0 / 0.35));
+}
+
+@media (prefers-color-scheme: dark) {
+  .metal-shadow,
+  .metal-text {
+    filter: none;
+  }
+}
+
+/* Метеоры первого экрана (Magic UI Meteors, MIT): только transform и opacity. */
+@keyframes ec-meteor {
+  0% {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--angle)) translateX(-500px);
+    opacity: 0;
+  }
+}
+
+.ec-meteor {
+  animation: ec-meteor linear infinite;
+}
+
+/*
+ * Заголовок первого экрана: буквы слетаются при загрузке и разлетаются при наведении мыши.
+ * Перелёт в кривой (1.56) даёт «пружину» без JS; transition прерывается и разворачивается на ходу.
+ */
+@keyframes ec-letter-in {
+  from {
+    opacity: 0;
+    transform: translate(var(--fx), var(--fy)) rotate(var(--fr)) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.magnetic-in {
+  animation: ec-letter-in 850ms cubic-bezier(0.34, 1.3, 0.64, 1) both;
+  animation-delay: calc(var(--i) * 16ms);
+}
+
+.magnetic-letter {
+  transition: transform 380ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .magnetic:hover .magnetic-letter {
+    transform: translate(var(--sx), var(--sy)) rotate(var(--sr)) scale(1.06);
+  }
+}
+
+/*
+ * Пиксельная кнопка (components/ui/retro-pixel-link.tsx).
+ * Блок раскрывается clip-path, стрелка и подпись едут transform — без пересчёта раскладки.
+ */
+.pixel-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 3.75rem;
+  min-width: min(20rem, 100%);
+  border: 1px solid color-mix(in oklab, var(--accent) 45%, transparent);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  color: var(--foreground);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  overflow: hidden;
+  container-type: inline-size;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+  transition:
+    transform 160ms var(--ease-out),
+    box-shadow 200ms ease;
+}
+
+.pixel-btn:active {
+  transform: scale(0.98);
+}
+
+.pixel-btn-fill {
+  position: absolute;
+  inset: 4px;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  clip-path: inset(0 calc(100% - 3.25rem) 0 0 round 0.5rem);
+  transition: clip-path 450ms var(--ease-out);
+}
+
+.pixel-btn-icon {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  display: flex;
+  width: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--on-accent);
+  transition: transform 450ms var(--ease-out);
+}
+
+.pixel-btn-icon svg {
+  transition: transform 450ms var(--ease-out);
+}
+
+.pixel-btn-label {
+  position: relative;
+  width: 100%;
+  padding: 0 1.25rem 0 4.25rem;
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    transform 450ms var(--ease-out),
+    color 200ms ease;
+}
+
+@keyframes ec-blur-pulse {
+  50% {
+    filter: blur(2px);
+    opacity: 0.6;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pixel-btn:hover {
+    box-shadow: 0 6px 16px rgb(0 0 0 / 0.08);
+  }
+  .pixel-btn:hover .pixel-btn-fill {
+    clip-path: inset(0 0 0 0 round 0.5rem);
+  }
+  .pixel-btn:hover .pixel-btn-icon {
+    transform: translateX(calc(100cqw - 3.25rem - 8px));
+  }
+  .pixel-btn:hover .pixel-btn-icon svg {
+    transform: rotate(360deg);
+  }
+  .pixel-btn:hover .pixel-btn-label {
+    transform: translateX(-3rem);
+    color: var(--on-accent);
+    animation: ec-blur-pulse 300ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .magnetic-in {
+    animation: none;
+  }
+  .magnetic:hover .magnetic-letter,
+  .pixel-btn:hover .pixel-btn-icon,
+  .pixel-btn:hover .pixel-btn-icon svg,
+  .pixel-btn:hover .pixel-btn-label {
+    transform: none;
+    animation: none;
+  }
+}
+
+/* Спиннер: вращение — linear (постоянное движение), перелив подписи — тоже. */
+@keyframes ec-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ec-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.ec-spin {
+  animation: ec-spin 0.8s linear infinite;
+}
+
+.ec-shimmer {
+  background-image: linear-gradient(90deg, var(--foreground) 0%, var(--subtle) 50%, var(--foreground) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: ec-shimmer 2.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ec-meteor {
+    display: none;
+  }
+  .ec-spin {
+    animation-duration: 2.4s;
+  }
+  .ec-shimmer {
+    animation: none;
+    color: var(--muted);
+    background: none;
+  }
 }
 
 /*

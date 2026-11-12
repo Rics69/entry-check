@@ -83,7 +83,7 @@ export function Modal({ children, labelledBy, closeLabel }: { children: ReactNod
           type="button"
           onClick={close}
           aria-label={closeLabel}
-          className="absolute top-3 right-3 flex size-11 items-center justify-center rounded-lg text-2xl text-muted transition-colors hover:bg-background hover:text-foreground"
+          className="press absolute top-3 right-3 flex size-11 items-center justify-center rounded-lg text-2xl text-muted hover:bg-background hover:text-foreground"
         >
           ×
         </button>

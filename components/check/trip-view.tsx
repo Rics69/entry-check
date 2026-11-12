@@ -17,7 +17,7 @@ import { TripPackOffer } from "./trip-pack-offer";
 const noopSubscribe = () => () => {};
 
 const SECONDARY_BUTTON =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border-strong bg-surface px-4 text-sm font-medium transition-colors hover:border-accent hover:text-accent";
+  "press inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border-strong bg-surface px-4 text-sm font-medium hover:border-accent hover:text-accent";
 
 /**
  * Результат проверки по ссылке /trip?d=… Считается в браузере — сервер не участвует,
@@ -48,7 +48,7 @@ export function TripView() {
       <div className="py-10 text-center">
         <h1 className="text-2xl font-semibold">{t("invalidTitle")}</h1>
         <p className="mt-2 text-muted">{t("invalidText")}</p>
-        <Link href="/check" className="mt-6 inline-flex min-h-12 items-center rounded-lg bg-accent px-6 font-medium text-on-accent hover:bg-accent-hover">
+        <Link href="/check" data-sound="press" className="press mt-6 inline-flex min-h-12 items-center rounded-lg bg-accent px-6 font-medium text-on-accent hover:bg-accent-hover">
           {t("checkAgain")}
         </Link>
       </div>
@@ -125,18 +125,18 @@ function TripActions({ raw, route }: { raw: string; route: string }) {
 
   return (
     <div className="flex flex-wrap gap-2 print:hidden">
-      <Link href={{ pathname: "/check", query: { d: raw } }} className={SECONDARY_BUTTON}>
+      <Link href={{ pathname: "/check", query: { d: raw } }} data-sound="tap" className={SECONDARY_BUTTON}>
         {t("edit")}
       </Link>
-      <button type="button" onClick={copy} className={SECONDARY_BUTTON} aria-live="polite">
+      <button type="button" onClick={copy} data-sound="tap" className={SECONDARY_BUTTON} aria-live="polite">
         {copied ? `✓ ${t("copied")}` : t("copy")}
       </button>
       {canShare && (
-        <button type="button" onClick={share} className={SECONDARY_BUTTON}>
+        <button type="button" onClick={share} data-sound="tap" className={SECONDARY_BUTTON}>
           {t("share")}
         </button>
       )}
-      <button type="button" onClick={() => window.print()} className={SECONDARY_BUTTON}>
+      <button type="button" onClick={() => window.print()} data-sound="tap" className={SECONDARY_BUTTON}>
         {t("print")}
       </button>
     </div>

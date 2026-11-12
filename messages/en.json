@@ -12,7 +12,9 @@
       "faq": "FAQ",
       "label": "Page sections"
     },
-    "cta": "Check my trip"
+    "cta": "Check my trip",
+    "soundOn": "Turn sound on",
+    "soundOff": "Turn sound off"
   },
   "footer": {
     "disclaimer": "Reference information, not legal advice. You file applications yourself on official websites.",

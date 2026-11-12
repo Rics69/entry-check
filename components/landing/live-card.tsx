@@ -4,6 +4,7 @@ import { flagEmoji } from "@/data/countries";
 import { countryName, zoneName } from "@/lib/format";
 import type { StopResult, TripResult } from "@/lib/rules/engine";
 import { StatusBadge } from "../trip/status-badge";
+import { LoadingSpinner } from "../ui/loading-spinner";
 import { useTripSummaryText } from "../trip/trip-summary";
 
 const FIRST_DELAY_MS = 500;
@@ -20,7 +21,7 @@ export function LiveCard({ result }: { result: TripResult }) {
   const summaryDelay = FIRST_DELAY_MS + result.stops.length * STEP_MS;
 
   return (
-    <div className="rounded-2xl border border-border bg-surface shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)]">
+    <div className="rounded-2xl border border-border bg-surface/85 shadow-[0_4px_6px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.05)] backdrop-blur-md">
       <div className="flex items-center justify-between gap-4 border-b border-border px-5 py-4">
         <div>
           <p className="text-sm text-muted">{t("label")}</p>
@@ -47,10 +48,12 @@ export function LiveCard({ result }: { result: TripResult }) {
               <p className="mt-0.5 line-clamp-2 text-sm text-muted">{stopHeadline(stop, locale, t)}</p>
             </div>
             <span className="grid shrink-0 justify-items-end" style={{ "--delay": `${FIRST_DELAY_MS + i * STEP_MS}ms` } as CSSProperties}>
-              <span className="ec-pending col-start-1 row-start-1 inline-flex items-center gap-1.5 self-center text-sm text-muted" aria-hidden="true">
-                <span className="size-3 animate-spin rounded-full border-2 border-border-strong border-t-accent motion-reduce:hidden" />
-                {t("checking")}
-              </span>
+              <LoadingSpinner
+                decorative
+                size="sm"
+                label={t("checking")}
+                className="ec-pending col-start-1 row-start-1 self-center text-sm text-accent"
+              />
               <StatusBadge status={stop.status} className="ec-reveal col-start-1 row-start-1" />
             </span>
           </li>

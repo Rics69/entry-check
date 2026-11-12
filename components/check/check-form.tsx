@@ -163,7 +163,8 @@ export function CheckForm({ titleId }: { titleId?: string }) {
             <button
               type="button"
               onClick={addStop}
-              className="mt-4 flex min-h-12 items-center justify-center gap-2 rounded-xl border border-dashed border-border-strong text-base font-medium text-muted transition-colors hover:border-accent hover:text-accent"
+              data-sound="tap"
+              className="press mt-4 flex min-h-12 items-center justify-center gap-2 rounded-xl border border-dashed border-border-strong text-base font-medium text-muted hover:border-accent hover:text-accent"
             >
               <span aria-hidden="true" className="text-xl leading-none">+</span> {t("route.add")}
             </button>
@@ -172,7 +173,8 @@ export function CheckForm({ titleId }: { titleId?: string }) {
           <button
             type="submit"
             disabled={submitting}
-            className="mt-6 inline-flex min-h-12 items-center justify-center rounded-lg bg-accent px-6 text-base font-medium text-on-accent shadow-sm transition hover:bg-accent-hover disabled:opacity-60"
+            data-sound="press"
+            className="press mt-6 inline-flex min-h-12 items-center justify-center rounded-lg bg-accent px-6 text-base font-medium text-on-accent shadow-sm hover:bg-accent-hover disabled:opacity-60"
           >
             {t("route.submit")}
           </button>
@@ -222,7 +224,8 @@ function PassportPicker({ locale, selected, onSelect }: { locale: Locale; select
                   type="button"
                   onClick={() => onSelect(code)}
                   aria-pressed={selected === code}
-                  className="flex min-h-12 w-full items-center gap-2 rounded-lg border border-border px-3 text-left transition-colors hover:border-accent aria-pressed:border-accent aria-pressed:bg-accent-soft"
+                  data-sound="tap"
+                  className="press flex min-h-12 w-full items-center gap-2 rounded-lg border border-border px-3 text-left hover:border-accent aria-pressed:border-accent aria-pressed:bg-accent-soft"
                 >
                   <span aria-hidden="true" className="text-lg">{flagEmoji(code)}</span>
                   <span className="truncate">{getCountry(code)?.name[locale]}</span>
@@ -267,7 +270,7 @@ function StopFields({
             type="button"
             onClick={onRemove}
             aria-label={t("route.remove", { n: index + 1 })}
-            className="flex size-10 items-center justify-center rounded-lg text-xl text-muted transition-colors hover:bg-background hover:text-foreground"
+            className="press flex size-10 items-center justify-center rounded-lg text-xl text-muted hover:bg-background hover:text-foreground"
           >
             ×
           </button>
@@ -349,7 +352,8 @@ function StopFields({
               type="button"
               aria-pressed={stop.transit === transit}
               onClick={() => onChange({ transit })}
-              className="min-h-10 rounded-md px-2 font-medium text-muted transition-colors aria-pressed:bg-surface aria-pressed:text-foreground aria-pressed:shadow-sm"
+              data-sound="toggle"
+              className="press min-h-10 rounded-md px-2 font-medium text-muted aria-pressed:bg-surface aria-pressed:text-foreground aria-pressed:shadow-sm"
             >
               {transit ? t("route.transit") : t("route.entering")}
             </button>

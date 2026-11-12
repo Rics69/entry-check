@@ -71,11 +71,12 @@ export function SiteCheck({
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder={t("placeholder")}
-          className="h-12 min-w-0 flex-1 rounded-lg border border-border-strong bg-background px-4 text-base transition-shadow focus:border-accent focus:shadow-[0_0_0_3px_var(--accent-soft)] focus:outline-none"
+          className="h-12 min-w-0 rounded-lg border border-border-strong bg-background px-4 text-base transition-shadow focus:border-accent focus:shadow-[0_0_0_3px_var(--accent-soft)] focus:outline-none sm:flex-1"
         />
         <button
           type="submit"
-          className="h-12 rounded-lg bg-foreground px-6 text-base font-medium text-background transition hover:opacity-90"
+          data-sound="press"
+          className="press h-12 rounded-lg bg-foreground px-6 text-base font-medium text-background hover:opacity-90"
         >
           {t("submit")}
         </button>
@@ -91,7 +92,8 @@ export function SiteCheck({
               setValue(example);
               check(example);
             }}
-            className="min-h-9 rounded-md border border-border px-2.5 font-mono text-[13px] text-foreground transition-colors hover:border-accent"
+            data-sound="tap"
+            className="press min-h-9 rounded-md border border-border px-2.5 font-mono text-[13px] text-foreground hover:border-accent"
           >
             {example}
           </button>
@@ -132,7 +134,7 @@ export function SiteCheck({
                           href={portal.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex min-h-11 max-w-full items-center gap-2 rounded-lg border border-border-strong bg-surface px-3.5 text-sm transition-colors hover:border-accent hover:text-accent"
+                          className="press inline-flex min-h-11 max-w-full items-center gap-2 rounded-lg border border-border-strong bg-surface px-3.5 text-sm hover:border-accent hover:text-accent"
                         >
                           <span className="truncate">{portal.label}</span>
                           <span className="hidden truncate text-muted sm:inline">{portal.host}</span>

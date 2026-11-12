@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { Analytics } from "@/components/analytics";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SoundEffects } from "@/components/sound";
 import { routing } from "@/i18n/routing";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import "../globals.css";
@@ -13,6 +14,14 @@ import "../globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin", "cyrillic"],
+});
+
+// Моноширинный — только для пиксельной кнопки на первом экране; без предзагрузки, чтобы не тормозить остальное.
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin", "cyrillic"],
+  weight: ["500"],
+  preload: false,
 });
 
 /** Разделы переводов для клиентских компонентов шапки. Страницы добавляют свои через <ClientMessages>. */
@@ -67,7 +76,7 @@ export default async function LocaleLayout({
   const clientMessages = pick(messages, CLIENT_NAMESPACES);
 
   return (
-    <html lang={locale} data-scroll-behavior="smooth" className={`${geistSans.variable} h-full antialiased`}>
+    <html lang={locale} data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
         <NextIntlClientProvider messages={clientMessages}>
           <SiteHeader />
@@ -77,6 +86,7 @@ export default async function LocaleLayout({
         {/* Попап проверки маршрута (перехват /check), см. app/[locale]/@modal. */}
         {modal}
         <Analytics />
+        <SoundEffects />
       </body>
     </html>
   );

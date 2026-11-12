@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { TripView } from "@/components/check/trip-view";
 import { ClientMessages } from "@/components/client-messages";
 import type { Locale } from "@/i18n/routing";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/trip">): Promise<Metadata> {
   const { locale } = await params;
@@ -21,7 +22,13 @@ export default async function TripPage({ params }: PageProps<"/[locale]/trip">) 
   return (
     <section className="mx-auto max-w-3xl px-4 py-10 sm:py-14 print:max-w-none print:p-0">
       <ClientMessages namespaces={["trip", "tripPage", "tripPack", "waitlist"]}>
-        <Suspense fallback={<p className="py-16 text-center text-muted">{t("loading")}</p>}>
+        <Suspense
+          fallback={
+            <div className="flex justify-center py-16 text-accent">
+              <LoadingSpinner label={t("loading")} />
+            </div>
+          }
+        >
           <TripView />
         </Suspense>
       </ClientMessages>

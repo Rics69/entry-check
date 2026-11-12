@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { formatFee } from "@/lib/format";
+import { LoadingSpinner } from "../ui/loading-spinner";
 
 type OrderInfo = { status: string; amount: string; currency: string; d: string | null };
 type Load = { state: "loading" } | { state: "missing" } | { state: "ready"; order: OrderInfo };
@@ -39,7 +40,7 @@ function useOrder(poll: boolean): Load & { orderId: string | null } {
   return { ...(orderId ? load : { state: "missing" as const }), orderId };
 }
 
-const PRIMARY = "inline-flex min-h-12 items-center justify-center rounded-lg bg-accent px-6 font-medium text-on-accent transition hover:bg-accent-hover";
+const PRIMARY = "press inline-flex min-h-12 items-center justify-center rounded-lg bg-accent px-6 font-medium text-on-accent hover:bg-accent-hover";
 
 export function PaySuccess() {
   const t = useTranslations("pay");
@@ -55,10 +56,12 @@ export function PaySuccess() {
       text={paid ? t("successText") : t("waitingText")}
       tone={paid ? "ok" : "wait"}
     >
-      {paid && (
-        <Link href={`/trip/${result.orderId}`} className={PRIMARY}>
+      {paid ? (
+        <Link href={`/trip/${result.orderId}`} data-sound="press" className={PRIMARY}>
           {t("openTrip")}
         </Link>
+      ) : (
+        <LoadingSpinner decorative className="text-warn" />
       )}
     </Message>
   );
@@ -126,8 +129,8 @@ export function MockCheckout({ enabled }: { enabled: boolean }) {
 
 function Spinner() {
   return (
-    <div className="flex justify-center py-16" aria-busy="true">
-      <span className="size-8 animate-spin rounded-full border-4 border-border border-t-accent" />
+    <div className="flex justify-center py-16 text-accent" aria-busy="true">
+      <LoadingSpinner size="lg" decorative />
     </div>
   );
 }

@@ -194,7 +194,7 @@ function OfficialLink({ url, label, zone, rule }: { url: string; label: string; 
       data-track="official_click"
       data-zone={zone ?? undefined}
       data-rule={rule}
-      className="group mt-4 flex min-h-11 w-full items-center justify-between gap-3 rounded-lg border border-border-strong px-3.5 py-2 text-sm transition-colors hover:border-accent"
+      className="press group mt-4 flex min-h-11 w-full items-center justify-between gap-3 rounded-lg border border-border-strong px-3.5 py-2 text-sm hover:border-accent"
     >
       <span className="flex min-w-0 flex-col">
         <span className="font-medium group-hover:text-accent">{label}</span>

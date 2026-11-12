@@ -31,8 +31,9 @@ function SwitcherLinks({ query }: { query?: Record<string, string> }) {
             lang={locale}
             title={LABELS[locale].name}
             aria-current={active ? "true" : undefined}
+            data-sound="tap"
             className={
-              "flex h-10 min-w-11 items-center justify-center rounded-md px-2 text-sm font-medium transition-colors " +
+              "press flex h-10 min-w-11 items-center justify-center rounded-md px-2 text-sm font-medium transition-colors " +
               (active
                 ? "bg-surface text-foreground shadow-sm"
                 : "text-muted hover:text-foreground")

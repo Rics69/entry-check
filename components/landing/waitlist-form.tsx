@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { useId, useState, type FormEvent } from "react";
 import { track } from "@/lib/analytics";
+import { LoadingSpinner } from "../ui/loading-spinner";
 
 type State = "idle" | "sending" | "success" | "error" | "invalid";
 
@@ -66,9 +67,10 @@ export function WaitlistForm({ submitLabel, source }: { submitLabel: string; sou
       <button
         type="submit"
         disabled={state === "sending"}
-        className="mt-1 h-12 rounded-lg border border-foreground px-5 text-base font-medium transition-colors hover:bg-foreground hover:text-background disabled:opacity-60"
+        data-sound="press"
+        className="press mt-1 inline-flex h-12 items-center justify-center rounded-lg border border-foreground px-5 text-base font-medium hover:bg-foreground hover:text-background disabled:opacity-80"
       >
-        {state === "sending" ? t("sending") : submitLabel}
+        {state === "sending" ? <LoadingSpinner size="sm" shimmer={false} label={t("sending")} /> : submitLabel}
       </button>
       <p role={state === "invalid" || state === "error" ? "alert" : undefined} className={`text-sm ${state === "invalid" || state === "error" ? "text-stop" : "text-muted"}`}>
         {state === "invalid" ? t("invalid") : state === "error" ? t("error") : t("privacy")}

@@ -8,6 +8,7 @@ import { track } from "@/lib/analytics";
 import { paymentsMode } from "@/lib/config";
 import { formatTripPackPrice } from "@/lib/pricing";
 import { CheckIcon } from "../icons";
+import { LoadingSpinner } from "../ui/loading-spinner";
 import { WaitlistForm } from "../landing/waitlist-form";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -134,9 +135,14 @@ export function TripPackOffer({ d }: { d: string }) {
         <button
           type="submit"
           disabled={state === "sending"}
-          className="mt-2 inline-flex min-h-12 items-center justify-center rounded-lg bg-accent px-6 text-base font-medium text-on-accent shadow-sm transition hover:bg-accent-hover disabled:opacity-60"
+          data-sound="press"
+          className="press mt-2 inline-flex min-h-12 items-center justify-center rounded-lg bg-accent px-6 text-base font-medium text-on-accent shadow-sm hover:bg-accent-hover disabled:opacity-80"
         >
-          {state === "sending" ? t("paying") : t("pay", { price: formatTripPackPrice(locale) })}
+          {state === "sending" ? (
+            <LoadingSpinner size="sm" shimmer={false} label={t("paying")} />
+          ) : (
+            t("pay", { price: formatTripPackPrice(locale) })
+          )}
         </button>
 
         {message && (
