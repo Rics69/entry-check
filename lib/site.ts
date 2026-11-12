@@ -11,8 +11,22 @@ export const SITE_NAME = "Entry Check";
  */
 export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@entry-check.example";
 
-/**
- * Продавец для юридических страниц. Заполнитель, пока не зарегистрирована компания или ИП
- * (см. «Компания и налоги» в бизнес-плане).
+/*
+ * Продавец — самозанятый (плательщик налога на профессиональный доход).
+ * На сайте обязательно ФИО и ИНН: в условиях, политике конфиденциальности и подвале.
+ * Для английских страниц — ФИО латиницей (если не задано, берётся русское).
  */
-export const LEGAL_SELLER = process.env.NEXT_PUBLIC_LEGAL_SELLER || "[название компании или ИП, ИНН или рег. номер]";
+const SELLER_NAME = process.env.NEXT_PUBLIC_SELLER_NAME?.trim() ?? "";
+const SELLER_NAME_EN = process.env.NEXT_PUBLIC_SELLER_NAME_EN?.trim() || SELLER_NAME;
+const SELLER_INN = process.env.NEXT_PUBLIC_SELLER_INN?.trim() ?? "";
+
+/** Реквизиты заданы — можно показывать в подвале. */
+export const SELLER_CONFIGURED = Boolean(SELLER_NAME && SELLER_INN);
+
+/** Строка продавца на языке страницы; без реквизитов — заметный заполнитель. */
+export function legalSeller(locale: "ru" | "en"): string {
+  if (!SELLER_CONFIGURED) return locale === "ru" ? "[ФИО самозанятого, ИНН]" : "[self-employed seller's name, INN]";
+  return locale === "ru"
+    ? `${SELLER_NAME}, самозанятый (плательщик налога на профессиональный доход), ИНН ${SELLER_INN}`
+    : `${SELLER_NAME_EN}, self-employed individual (professional income tax payer, Russia), INN ${SELLER_INN}`;
+}

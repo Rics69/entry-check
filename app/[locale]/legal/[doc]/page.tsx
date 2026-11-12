@@ -9,7 +9,7 @@ import { LEGAL_DOCS, LEGAL_EDITION, type LegalDoc, type LegalDocId } from "@/con
 import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { formatDay } from "@/lib/format";
-import { LEGAL_SELLER, SITE_NAME, SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
+import { legalSeller, SITE_NAME, SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -23,9 +23,9 @@ function getDoc(locale: string, doc: string): LegalDoc | null {
 }
 
 /** Подстановка реквизитов: {seller}, {email}, {site}. */
-function fill(text: string): string {
+function fill(text: string, locale: Locale): string {
   return text
-    .replaceAll("{seller}", LEGAL_SELLER)
+    .replaceAll("{seller}", legalSeller(locale))
     .replaceAll("{email}", SUPPORT_EMAIL)
     .replaceAll("{site}", SITE_URL.replace(/^https?:\/\//, ""));
 }
@@ -54,16 +54,15 @@ export default function LegalPage({ params }: PageProps<"/[locale]/legal/[doc]">
       </Link>
       <h1 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">{content.title}</h1>
       <p className="mt-2 text-sm text-muted">{t("edition", { date: formatDay(LEGAL_EDITION, locale, true) })}</p>
-      <p className="mt-6 rounded-xl bg-warn-soft px-4 py-3 text-sm">{t("draftNotice")}</p>
 
-      {content.intro && <p className="mt-8 text-lg leading-relaxed">{fill(content.intro)}</p>}
+      {content.intro && <p className="mt-8 text-lg leading-relaxed">{fill(content.intro, locale as Locale)}</p>}
 
       {content.sections.map((section) => (
         <section key={section.heading} className="mt-10">
           <h2 className="text-xl font-semibold">{section.heading}</h2>
           {section.paragraphs.map((paragraph) => (
             <p key={paragraph} className="mt-3 leading-relaxed text-muted">
-              {fill(paragraph)}
+              {fill(paragraph, locale as Locale)}
             </p>
           ))}
         </section>

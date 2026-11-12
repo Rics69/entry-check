@@ -19,9 +19,8 @@
     {
       "binding": "DB",
       "database_name": "entry-check",
-      // Замените на id из `npx wrangler d1 create entry-check` (фаза 0 в docs/DEV_PLAN.md).
-      // Для локальной разработки (--local) подходит и этот заполнитель.
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      // Боевая база (создана 12 ноября 2026, регион WEUR). Локально (--local) используется своя копия.
+      "database_id": "cd7e55c0-3d7d-4443-b031-69a3da17d9d7",
       "migrations_dir": "db/migrations"
     }
   ],
@@ -37,7 +36,12 @@
   // и показывал бы черновики.
   "define": {
     "process.env.NODE_ENV": "\"production\""
+  },
+  // Адрес сайта для ссылок в письмах cron: worker.ts собирает wrangler, и NEXT_PUBLIC_SITE_URL из сборки Next ему не виден.
+  // Пока домена нет — бесплатный адрес workers.dev; после покупки домена поменять здесь и в NEXT_PUBLIC_SITE_URL.
+  "vars": {
+    "SITE_URL": "https://entry-check.fest-ready.workers.dev"
   }
   // Секреты: npx wrangler secret put ROLLYPAY_API_KEY | ROLLYPAY_SIGNING_SECRET | RESEND_API_KEY
-  // Переменные: SITE_URL (адрес сайта для ссылок в письмах cron), EMAIL_FROM, ROLLYPAY_TEST — в "vars" при деплое.
+  // Переменные: EMAIL_FROM, ROLLYPAY_TEST — добавить в "vars", когда подключим почту и кассу.
 }

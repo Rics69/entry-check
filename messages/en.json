@@ -358,8 +358,7 @@
   },
   "legal": {
     "edition": "Version of {date}",
-    "back": "Back to home",
-    "draftNotice": "Draft document: a lawyer will review it before payments launch."
+    "back": "Back to home"
   },
   "notFound": {
     "title": "Page not found",

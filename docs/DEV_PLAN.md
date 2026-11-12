@@ -29,10 +29,10 @@
 Код от них не блокируется: всё, что зависит от ключей, работает через переменные окружения и заглушки.
 
 - [ ] Купить домен, подключить к Cloudflare
-- [ ] Cloudflare: `npx wrangler login`, `npx wrangler d1 create entry-check` → вписать `database_id` в `wrangler.jsonc`
+- [x] Cloudflare: `npx wrangler login`, `npx wrangler d1 create entry-check` → `database_id` в `wrangler.jsonc` (12 ноября 2026, регион WEUR)
 - [ ] Resend: подтвердить домен (SPF, DKIM), получить `RESEND_API_KEY`
 - [ ] **RollyPay: подать заявку на кассу в первый же день** (цифровой сервис; СБП, карты РФ, международные карты; уточнить комиссию и процедуру возврата) → `ROLLYPAY_API_KEY`, `ROLLYPAY_SIGNING_SECRET`
-- [ ] Почта поддержки для `reply-to` и «Сообщить об ошибке»
+- [x] Почта поддержки для `reply-to` и «Сообщить об ошибке» (в `.env.local`)
 
 ## Фаза 1 — фундамент (≈ день 1)
 
@@ -100,7 +100,7 @@
 - [x] Блок «Проверьте сайт»: сверка домена со списком госпорталов, без ИИ; для двойников вроде `thailand-tdac-online.com` подсказывает настоящий портал
 - [x] Цены: Trip Pack 490 ₽ / €6.99 (`lib/pricing.ts` — одно место и для лендинга, и для оплаты); Traveler Pass — «скоро» с формой «Сообщить о запуске»
 - [x] `/api/waitlist` (перенесён из фазы 4): запись в D1 без дублей, ловушка для ботов
-- [x] Черновики условий, конфиденциальности, возвратов (RU/EN) — **требуют проверки юристом**; реквизиты из `NEXT_PUBLIC_LEGAL_SELLER` и `NEXT_PUBLIC_SUPPORT_EMAIL`
+- [x] Черновики условий, конфиденциальности, возвратов (RU/EN) — **требуют проверки юристом**; реквизиты из `NEXT_PUBLIC_SELLER_NAME`, `NEXT_PUBLIC_SELLER_NAME_EN`, `NEXT_PUBLIC_SELLER_INN` и `NEXT_PUBLIC_SUPPORT_EMAIL`
 - [x] Адаптив от 360 px, метаданные, FAQ-разметка schema.org, `robots.txt`, `sitemap.xml` с языковыми версиями
 - [x] Компоненты результата `components/trip/*` (карточка страны, статус, сводка) — переиспользуются в фазе 4
 - [ ] OG-картинки — перенесены в фазу 6 (нужен шрифт с кириллицей для генерации)
@@ -162,12 +162,15 @@
 
 - [ ] Пройти предзапусковый чек-лист из плана MVP
 - [ ] CI: lint, typecheck, test, проверка непроверенных правил и свежести, сборка
-- [ ] Деплой на Cloudflare, миграции D1 на проде, боевой режим кассы, одна настоящая оплата и возврат
+- [x] Первый деплой: https://entry-check.fest-ready.workers.dev (12 ноября 2026) — D1 `entry-check`, миграции 0001–0003 на проде, оплата выключена (`off`, вместо кнопки — лист ожидания)
+  Деплой: `NEXT_PUBLIC_SITE_URL=https://entry-check.fest-ready.workers.dev NEXT_PUBLIC_PAYMENTS_MODE=off npm run deploy`. Переменные окружения сборки перекрывают `.env.local` — без них в прод уйдут localhost и режим из `.env.local`. Реквизиты продавца и почта поддержки берутся из `.env.local`
+- [ ] После покупки домена: `NEXT_PUBLIC_SITE_URL` при сборке и `SITE_URL` в `wrangler.jsonc` → домен, передеплоить
 - [ ] Ссылки для первых постов с `?ref=reddit`, `?ref=x`, `?ref=tg`
 - [ ] OG-картинки для RU и EN
-- [ ] Заменить заполнители: `NEXT_PUBLIC_SUPPORT_EMAIL`, `NEXT_PUBLIC_LEGAL_SELLER`; после проверки юристом убрать плашку «Черновик документа» (`legal.draftNotice`)
+- [x] Заменить заполнители: `NEXT_PUBLIC_SUPPORT_EMAIL`, ФИО и ИНН самозанятого (`NEXT_PUBLIC_SELLER_NAME`, `NEXT_PUBLIC_SELLER_NAME_EN`, `NEXT_PUBLIC_SELLER_INN`)
+- [x] Плашка «Черновик документа» убрана (решение Данила, 12 ноября 2026); продавец — самозанятый, реквизиты в документах и подвале
 - [ ] Подключить кассу: секреты `ROLLYPAY_API_KEY`, `ROLLYPAY_SIGNING_SECRET` (`wrangler secret put`), URL вебхука `https://<домен>/api/webhooks/rollypay` в кабинете RollyPay, `NEXT_PUBLIC_PAYMENTS_MODE=rollypay`. Сначала тестовые платежи RU и EN (`ROLLYPAY_TEST=true`), потом одна настоящая оплата и возврат
-- [ ] Подключить почту: `RESEND_API_KEY`, `EMAIL_FROM` на подтверждённом домене; `SITE_URL` (ссылки в письмах из cron)
+- [ ] Подключить почту: `RESEND_API_KEY`, `EMAIL_FROM` на подтверждённом домене; `SITE_URL` в `wrangler.jsonc` уже задан (ссылки в письмах из cron)
 
 **Готово, когда:** все пункты чек-листа отмечены, сайт на домене.
 

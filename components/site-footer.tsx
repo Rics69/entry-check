@@ -1,6 +1,6 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { SUPPORT_EMAIL } from "@/lib/site";
+import { legalSeller, SELLER_CONFIGURED, SUPPORT_EMAIL } from "@/lib/site";
 import { LiquidMetalWordmark } from "./brand/liquid-metal-wordmark";
 import { GlyphMatrix } from "./ui/glyph-matrix";
 
@@ -9,6 +9,7 @@ const DOCS = ["terms", "privacy", "refunds"] as const;
 export function SiteFooter() {
   const t = useTranslations("footer");
   const header = useTranslations("header");
+  const locale = useLocale();
   const year = new Date().getFullYear();
 
   return (
@@ -36,6 +37,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-2 border-t border-border pt-6">
           <p>{t("disclaimer")}</p>
           <p>{t("payments")}</p>
+          {SELLER_CONFIGURED && <p>{legalSeller(locale === "ru" ? "ru" : "en")}</p>}
           <p>{t("copyright", { year })}</p>
         </div>
       </div>
