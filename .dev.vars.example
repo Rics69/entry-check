@@ -1,8 +1,16 @@
 # Секреты воркера. Локально: скопируйте в .dev.vars (файл в .gitignore).
 # В продакшне: npx wrangler secret put ИМЯ
 #
-# Касса RollyPay (фаза 5). Выдаются при создании кассы через поддержку.
+# Касса RollyPay — нужна только при NEXT_PUBLIC_PAYMENTS_MODE=rollypay.
+# Ключи выдаются при создании кассы через поддержку RollyPay.
 ROLLYPAY_API_KEY=
 ROLLYPAY_SIGNING_SECRET=
-# Resend (фаза 5).
+# true — тестовые платежи RollyPay (деньги не списываются).
+ROLLYPAY_TEST=true
+#
+# Resend. Пусто — письма не отправляются, а складываются в таблицу outbox (смотреть на /dev/emails).
 RESEND_API_KEY=
+EMAIL_FROM=Entry Check <hello@your-domain.com>
+#
+# Адрес сайта для ссылок в письмах ежедневного cron. Пусто — берётся NEXT_PUBLIC_SITE_URL из сборки.
+SITE_URL=

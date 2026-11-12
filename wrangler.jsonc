@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "entry-check",
-  "main": ".open-next/worker.js",
+  "main": "worker.ts",
   "compatibility_date": "2026-11-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
@@ -27,6 +27,17 @@
   ],
   "observability": {
     "enabled": true
+  },
+  // Ежедневно в 06:00 UTC: ставим в Resend напоминания, до которых осталось меньше 30 дней,
+  // и рассылаем письма «правила изменились». Обработчик — scheduled() в worker.ts.
+  "triggers": {
+    "crons": ["0 6 * * *"]
+  },
+  // worker.ts собирается wrangler'ом, а не Next.js: без этого код правил считал бы, что он не в продакшне,
+  // и показывал бы черновики.
+  "define": {
+    "process.env.NODE_ENV": "\"production\""
   }
-  // Ежедневный cron для дальних напоминаний и worker.ts добавим в фазе 5.
+  // Секреты: npx wrangler secret put ROLLYPAY_API_KEY | ROLLYPAY_SIGNING_SECRET | RESEND_API_KEY
+  // Переменные: SITE_URL (адрес сайта для ссылок в письмах cron), EMAIL_FROM, ROLLYPAY_TEST — в "vars" при деплое.
 }

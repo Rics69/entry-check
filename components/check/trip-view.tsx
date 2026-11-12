@@ -12,6 +12,7 @@ import { decodeTrip } from "@/lib/trip-codec";
 import { StatusBadge } from "../trip/status-badge";
 import { StopCard } from "../trip/stop-card";
 import { TripSummaryText } from "../trip/trip-summary";
+import { TripPackOffer } from "./trip-pack-offer";
 
 const noopSubscribe = () => () => {};
 
@@ -77,6 +78,8 @@ export function TripView() {
           <StopCard key={stop.stopIndexes.join("-")} stop={stop} index={i} />
         ))}
       </div>
+
+      <TripPackOffer d={raw} />
 
       <footer className="mt-8 flex flex-col gap-2 text-sm text-muted">
         <p className="font-medium text-foreground">{t("recheck")}</p>

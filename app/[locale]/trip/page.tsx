@@ -20,7 +20,7 @@ export default async function TripPage({ params }: PageProps<"/[locale]/trip">) 
 
   return (
     <section className="mx-auto max-w-3xl px-4 py-10 sm:py-14 print:max-w-none print:p-0">
-      <ClientMessages namespaces={["trip", "tripPage"]}>
+      <ClientMessages namespaces={["trip", "tripPage", "tripPack", "waitlist"]}>
         <Suspense fallback={<p className="py-16 text-center text-muted">{t("loading")}</p>}>
           <TripView />
         </Suspense>

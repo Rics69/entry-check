@@ -276,6 +276,84 @@
     "recheck": "Rules change. Check your route again 72 hours before departure.",
     "disclaimer": "Reference information, not legal advice. You file applications yourself on official websites."
   },
+  "tripPack": {
+    "title": "Trip Pack — reminders at the right moment",
+    "features": {
+      "pdf": "Printable PDF checklist",
+      "remind": "An email when each filing window opens",
+      "recheck": "Re-check 72 hours before departure",
+      "changes": "An email if the rules change"
+    },
+    "email": "Where to send your checklist and reminders",
+    "emailPlaceholder": "you@example.com",
+    "consentImmediate": "I ask you to start the service right after payment and understand that the 14-day right of withdrawal then no longer applies.",
+    "consentReference": "I understand that Entry Check is reference information, not legal advice, and that I file applications myself on official websites.",
+    "pay": "Pay {price}",
+    "paying": "Going to payment…",
+    "terms": "By paying, you accept the <terms>terms</terms> and the <refunds>refund policy</refunds>.",
+    "invalidEmail": "Please check your email address.",
+    "consentRequired": "Please tick both boxes.",
+    "error": "Couldn’t start the payment. Please try again.",
+    "mockNote": "Test mode: no money is charged.",
+    "soonTitle": "Trip Pack is coming soon",
+    "soonText": "Reminders when filing windows open and a re-check before you fly. Leave your email and we’ll let you know at launch.",
+    "soonCta": "Notify me at launch"
+  },
+  "pay": {
+    "metaTitle": "Payment — Entry Check",
+    "mockTitle": "Test payment",
+    "mockText": "This is a stand-in for the RollyPay checkout. No money is charged: the order simply becomes “paid” or “declined”.",
+    "mockAmount": "Amount: {amount}",
+    "mockPay": "Pay (test)",
+    "mockCancel": "Decline",
+    "mockUnavailable": "Test payments are turned off.",
+    "successTitle": "Payment received",
+    "successText": "Your checklist is already in your inbox. We’ll remind you when filing windows open and re-check your route 72 hours before departure.",
+    "openTrip": "Open your trip",
+    "waitingTitle": "Waiting for payment confirmation",
+    "waitingText": "This usually takes a few seconds. If the payment went through, your checklist will arrive as soon as the bank confirms it.",
+    "failTitle": "Payment didn’t go through",
+    "failText": "You haven’t been charged. You can try again.",
+    "retry": "Try again",
+    "notFound": "Order not found."
+  },
+  "paidTrip": {
+    "metaTitle": "Your trip — Entry Check",
+    "badge": "Trip Pack",
+    "active": "Reminders go to {email}",
+    "remindersTitle": "Reminders",
+    "reminderWindow": "{date} — reminder to file: {name}",
+    "reminderRecheck": "{date} — route re-check",
+    "reminderSent": "sent",
+    "reminderCanceled": "canceled",
+    "noReminders": "All filing windows are already open — follow your checklist.",
+    "print": "Printable checklist",
+    "changed": "Since your purchase, the rules changed for: {countries}. Check the marked cards.",
+    "changedBadge": "Updated after purchase",
+    "notPaidTitle": "This order isn’t paid",
+    "notPaidText": "The payment failed or hasn’t been confirmed yet.",
+    "refunded": "This Trip Pack was refunded and reminders are off.",
+    "checkAgain": "Check my trip"
+  },
+  "checklist": {
+    "metaTitle": "Trip checklist — Entry Check",
+    "title": "Trip checklist",
+    "passport": "Passport: {country}",
+    "generated": "Prepared on {date} from rules verified against official sources.",
+    "stop": "{n}. {country} — arriving {date}",
+    "applyBy": "Get: {name} — by {date}",
+    "apply": "Get: {name}",
+    "window": "Fill in: {name} — from {date}",
+    "windowOpen": "Fill in: {name} — window already open",
+    "pay": "Pay: {name} — {fee}",
+    "nothing": "Nothing to arrange",
+    "passportRule": "Passport: {text}",
+    "onward": "Carry a return or onward ticket",
+    "official": "Official website: {host}",
+    "save": "Save as PDF",
+    "back": "Back to trip",
+    "disclaimer": "Reference information, not legal advice. Check the official websites before you fly."
+  },
   "legal": {
     "edition": "Version of {date}",
     "back": "Back to home",
@@ -284,5 +362,44 @@
   "notFound": {
     "title": "Page not found",
     "back": "Back to home"
+  },
+  "email": {
+    "footer": "Entry Check is a reference service. You file applications yourself on official websites. Questions or spotted an error? Just reply to this email.",
+    "openTrip": "Open your trip",
+    "printChecklist": "Printable checklist",
+    "official": "Official website",
+    "checklist": {
+      "subject": "Trip Pack: checklist for {route}",
+      "title": "Payment received — here’s your checklist",
+      "intro": "Route: {route}. Passport: {passport}. Here’s what to do before you go.",
+      "stop": "{n}. {country}, arriving {date}",
+      "nothing": "Nothing to arrange.",
+      "applyBy": "{name}: apply by {date}",
+      "window": "{name}: filing opens {date} — we’ll remind you",
+      "windowOpen": "{name}: filing is already open — submit before you arrive",
+      "pay": "{name}: {fee}",
+      "passport": "Passport: {text}",
+      "reminders": "We’ll email you:",
+      "reminderWindow": "{date} — reminder to file: {name}",
+      "reminderRecheck": "{date} — 72 hours before your first arrival: re-check your route",
+      "guarantee": "If we missed a required document, we refund you the same day. Just reply to this email.",
+      "consent": "At checkout you confirmed:"
+    },
+    "windowOpen": {
+      "subject": "You can now file: {name}",
+      "title": "The filing window is open",
+      "body": "{name} ({country}): you can submit it now. Arrival — {date}.",
+      "cta": "File on the official website"
+    },
+    "recheck": {
+      "subject": "3 days to go — re-check your route",
+      "title": "Re-check your route before you fly",
+      "body": "About 72 hours until you arrive ({country}, {date}). Open your trip — we’ll recalculate the requirements with current rules and flag anything that changed."
+    },
+    "rulesChanged": {
+      "subject": "The rules for your route have changed",
+      "title": "Entry rules updated",
+      "body": "Since your purchase, the rules changed for: {countries}. Open your trip — changed cards are marked."
+    }
   }
 }

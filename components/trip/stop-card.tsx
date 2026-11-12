@@ -11,7 +11,7 @@ import { StatusBadge, STATUS_STYLES } from "./status-badge";
  * Карточка одной точки маршрута: статус, что оформить, где, сколько стоит и когда.
  * Без хуков состояния — рендерится и на сервере (образец на лендинге), и в браузере (страница результата).
  */
-export function StopCard({ stop, index }: { stop: StopResult; index: number }) {
+export function StopCard({ stop, index, badge }: { stop: StopResult; index: number; badge?: string }) {
   const t = useTranslations("trip");
   const locale = useLocale();
   const lang = locale === "ru" ? "ru" : "en";
@@ -39,6 +39,7 @@ export function StopCard({ stop, index }: { stop: StopResult; index: number }) {
           <h3 className="mt-1 text-lg font-semibold leading-snug">
             <span aria-hidden="true">{flags}</span> {title}
           </h3>
+          {badge && <p className="mt-2 inline-block rounded-md bg-warn-soft px-2 py-0.5 text-sm font-medium text-warn">{badge}</p>}
         </div>
         <StatusBadge status={stop.status} />
       </header>
