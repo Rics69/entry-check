@@ -74,5 +74,39 @@
     },
     "source": "https://www.nia.gov.cn/",
     "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "cn-unilateral-30",
+    "destination": "CN",
+    "appliesTo": { "passports": ["GB", "DE", "FR", "IT", "ES", "NL", "PL", "CA", "AU"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней (до 31 декабря 2026)", "en": "Visa-free up to 30 days (until 31 December 2026)" },
+    "officialUrl": "https://cs.mfa.gov.cn/",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": {
+      "ru": "Односторонний безвиз для обычных паспортов действует до 31 декабря 2026: туризм, бизнес, гости, обмены, транзит. Для Великобритании и Канады — с 17 февраля 2026.",
+      "en": "The unilateral visa exemption for ordinary passports runs until 31 December 2026: tourism, business, visiting, exchanges, transit. For the UK and Canada — since 17 February 2026."
+    },
+    "validUntil": "2026-12-31",
+    "source": "https://visasnews.com/en/china-canada-and-the-united-kingdom-added-to-the-list-of-visa-free-countries/",
+    "verifiedAt": "2026-11-10"
+  },
+  {
+    "id": "cn-visa-us",
+    "destination": "CN",
+    "appliesTo": { "passports": ["US"] },
+    "kind": "visa",
+    "name": { "ru": "Нужна виза", "en": "Visa required" },
+    "officialUrl": "https://cs.mfa.gov.cn/",
+    "processing": { "ru": "Обычно 4 рабочих дня, срочно — 2–3 за доплату", "en": "Usually 4 working days, express 2–3 for an extra fee" },
+    "recommendDaysBeforeArrival": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда и 2 чистые страницы", "en": "At least 6 months from the date of entry and 2 blank pages" },
+    "notes": {
+      "ru": "Подать можно не раньше чем за 90 дней до поездки. Без визы — только транзит до 240 часов по маршруту в третью страну с подтверждённым билетом: США → Китай → США не подходит.",
+      "en": "Apply no earlier than 90 days before travel. Without a visa — only a transit of up to 240 hours on the way to a third country with a confirmed ticket: US → China → US does not qualify."
+    },
+    "source": "https://cs.mfa.gov.cn/",
+    "verifiedAt": "2026-11-10"
   }
 ]

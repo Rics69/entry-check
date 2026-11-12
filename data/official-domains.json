@@ -58,7 +58,8 @@
     { "domain": "k-eta.go.kr", "label": { "ru": "Официальный K-ETA", "en": "Official K-ETA" } },
     { "domain": "e-arrivalcard.go.kr", "label": { "ru": "Официальная e-Arrival Card Кореи", "en": "Korea official e-Arrival Card" } },
     { "domain": "hikorea.go.kr", "label": { "ru": "HiKorea — иммиграционный портал", "en": "HiKorea immigration portal" } },
-    { "domain": "mofa.go.kr", "label": { "ru": "МИД Республики Корея", "en": "Ministry of Foreign Affairs of Korea" } }
+    { "domain": "mofa.go.kr", "label": { "ru": "МИД Республики Корея", "en": "Ministry of Foreign Affairs of Korea" } },
+    { "domain": "visa.go.kr", "label": { "ru": "Визовый портал Кореи", "en": "Korea Visa Portal" } }
   ],
   "JP": [
     { "domain": "digital.go.jp", "label": { "ru": "Visit Japan Web (Цифровое агентство Японии)", "en": "Visit Japan Web (Digital Agency of Japan)" } },

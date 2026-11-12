@@ -41,5 +41,39 @@
     "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
     "source": "https://icp.gov.ae/",
     "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "ae-voa-30-west",
+    "destination": "AE",
+    "appliesTo": { "passports": ["US", "GB", "AU"] },
+    "kind": "visa_on_arrival",
+    "name": { "ru": "Бесплатная виза по прилёте на 30 дней", "en": "Free visa on arrival for 30 days" },
+    "officialUrl": "https://u.ae/",
+    "fee": { "amount": 0, "currency": "AED" },
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": {
+      "ru": "Бесплатный штамп на паспортном контроле, заранее ничего оформлять не нужно. После 30 дней действует автоматический льготный период — ещё 10 дней.",
+      "en": "Free stamp at passport control; nothing to arrange in advance. An automatic 10-day grace period follows the 30 days."
+    },
+    "source": "https://u.ae/",
+    "verifiedAt": "2026-11-10"
+  },
+  {
+    "id": "ae-voa-90-west",
+    "destination": "AE",
+    "appliesTo": { "passports": ["DE", "FR", "IT", "ES", "NL", "PL", "CA"] },
+    "kind": "visa_on_arrival",
+    "name": { "ru": "Бесплатная многократная виза по прилёте на 90 дней", "en": "Free multiple-entry visa on arrival for 90 days" },
+    "officialUrl": "https://u.ae/",
+    "fee": { "amount": 0, "currency": "AED" },
+    "stayLimitDays": 90,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "notes": {
+      "ru": "Бесплатный штамп на паспортном контроле, заранее ничего оформлять не нужно. Многократная виза: до 90 дней, действует 6 месяцев с даты выдачи.",
+      "en": "Free stamp at passport control; nothing to arrange in advance. Multiple entry: up to 90 days, valid for 6 months from issue."
+    },
+    "source": "https://u.ae/",
+    "verifiedAt": "2026-11-10"
   }
 ]

@@ -59,5 +59,21 @@
     "notes": { "ru": "Официальный сайт только evisa.gov.tr.", "en": "The only official site is evisa.gov.tr." },
     "source": "https://www.evisa.gov.tr/",
     "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "tr-visa-free-90-west",
+    "destination": "TR",
+    "appliesTo": { "passports": ["US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "CA", "AU"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 90 дней в любые 180 дней", "en": "Visa-free up to 90 days in any 180 days" },
+    "officialUrl": "https://www.mfa.gov.tr/",
+    "stayLimitDays": 90,
+    "passportValidity": {
+      "ru": "На 60 дней дольше срока пребывания: не менее 150 дней с даты въезда",
+      "en": "60 days beyond your permitted stay: at least 150 days from the date of entry"
+    },
+    "notes": { "ru": "Туризм и короткие деловые поездки.", "en": "Tourism and short business trips." },
+    "source": "https://visasnews.com/la-turquie-supprime-le-visa-pour-les-australiens-des-ce-17-avril-2026/",
+    "verifiedAt": "2026-11-10"
   }
 ]

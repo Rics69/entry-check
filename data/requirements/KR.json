@@ -96,5 +96,82 @@
     "validUntil": "2026-12-31",
     "source": "https://www.e-arrivalcard.go.kr/",
     "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "kr-keta-ru",
+    "destination": "KR",
+    "appliesTo": { "passports": ["RU"] },
+    "kind": "eta",
+    "name": { "ru": "Без визы до 60 дней по K-ETA", "en": "Visa-free up to 60 days with K-ETA" },
+    "officialUrl": "https://www.k-eta.go.kr/",
+    "fee": { "amount": 10000, "currency": "KRW" },
+    "processing": { "ru": "Обычно до 72 часов", "en": "Usually within 72 hours" },
+    "recommendDaysBeforeArrival": 7,
+    "stayLimitDays": 60,
+    "passportValidity": {
+      "ru": "Действителен на весь срок поездки; рекомендуем от 6 месяцев — K-ETA не выдают дольше срока паспорта",
+      "en": "Valid for the whole trip; 6 months recommended — K-ETA is not issued beyond your passport expiry"
+    },
+    "notes": {
+      "ru": "Безвиз по соглашению: до 60 дней за поездку, не больше 90 дней за 180. Временная отмена K-ETA на граждан России не распространяется: перед вылетом нужна одобренная K-ETA, её проверяют при посадке. До 17 лет включительно и с 65 лет K-ETA не нужна. Сбор около 10 300 ₩ с комиссией, не возвращается. Действует 3 года, многократно. С K-ETA карта прибытия не нужна.",
+      "en": "Visa-free under a bilateral agreement: up to 60 days per trip, no more than 90 days in 180. The temporary K-ETA exemption does not cover Russian citizens: an approved K-ETA is required before departure and is checked at boarding. Travellers aged 17 and under or 65 and over don’t need K-ETA. Fee about ₩10,300 with the payment fee, non-refundable. Valid for 3 years, multiple entry. With K-ETA you don’t need an arrival card."
+    },
+    "source": "https://www.k-eta.go.kr/",
+    "verifiedAt": "2026-11-10"
+  },
+  {
+    "id": "kr-keta-kz",
+    "destination": "KR",
+    "appliesTo": { "passports": ["KZ"] },
+    "kind": "eta",
+    "name": { "ru": "Без визы до 30 дней по K-ETA", "en": "Visa-free up to 30 days with K-ETA" },
+    "officialUrl": "https://www.k-eta.go.kr/",
+    "fee": { "amount": 10000, "currency": "KRW" },
+    "processing": { "ru": "Обычно до 72 часов", "en": "Usually within 72 hours" },
+    "recommendDaysBeforeArrival": 7,
+    "stayLimitDays": 30,
+    "passportValidity": {
+      "ru": "Действителен на весь срок поездки; рекомендуем от 6 месяцев — K-ETA не выдают дольше срока паспорта",
+      "en": "Valid for the whole trip; 6 months recommended — K-ETA is not issued beyond your passport expiry"
+    },
+    "notes": {
+      "ru": "Безвиз по соглашению: до 30 дней за поездку, не больше 60 дней за 180. Временная отмена K-ETA на граждан Казахстана не распространяется: перед вылетом нужна одобренная K-ETA. До 17 лет включительно и с 65 лет K-ETA не нужна. Действует 3 года, многократно. С K-ETA карта прибытия не нужна.",
+      "en": "Visa-free under a bilateral agreement: up to 30 days per trip, no more than 60 days in 180. The temporary K-ETA exemption does not cover Kazakhstan: an approved K-ETA is required before departure. Travellers aged 17 and under or 65 and over don’t need K-ETA. Valid for 3 years, multiple entry. With K-ETA you don’t need an arrival card."
+    },
+    "source": "https://www.k-eta.go.kr/",
+    "verifiedAt": "2026-11-10"
+  },
+  {
+    "id": "kr-visa-cis",
+    "destination": "KR",
+    "appliesTo": { "passports": ["BY", "UZ", "KG", "AM"] },
+    "kind": "visa",
+    "name": { "ru": "Нужна виза (C-3)", "en": "Visa required (C-3)" },
+    "officialUrl": "https://www.visa.go.kr/",
+    "processing": { "ru": "Обычно 5–10 рабочих дней", "en": "Usually 5–10 working days" },
+    "recommendDaysBeforeArrival": 30,
+    "passportValidity": { "ru": "Рекомендуется не менее 6 месяцев", "en": "At least 6 months recommended" },
+    "notes": {
+      "ru": "Подаётся в консульстве или визовом центре Кореи. Часть категорий может подать электронную визу на visa.go.kr.",
+      "en": "Apply at a Korean consulate or visa centre. Some categories can apply for an e-visa at visa.go.kr."
+    },
+    "source": "https://www.visa.go.kr/",
+    "verifiedAt": "2026-11-10"
+  },
+  {
+    "id": "kr-e-arrival-visa",
+    "destination": "KR",
+    "appliesTo": { "passports": ["BY", "UZ", "KG", "AM"] },
+    "kind": "arrival_card",
+    "name": { "ru": "Электронная карта прибытия (e-Arrival Card)", "en": "e-Arrival Card" },
+    "officialUrl": "https://www.e-arrivalcard.go.kr/",
+    "fee": { "amount": 0, "currency": "KRW" },
+    "windowHoursBeforeArrival": 72,
+    "notes": {
+      "ru": "Бесплатно. Подаётся за 72 часа до прилёта по времени Кореи; отправленная карта действует 72 часа. Можно заполнить и бумажную карту в аэропорту.",
+      "en": "Free. Submit within 72 hours before arrival, Korea time; a submitted card is valid for 72 hours. A paper card at the airport is also accepted."
+    },
+    "source": "https://www.e-arrivalcard.go.kr/",
+    "verifiedAt": "2026-11-10"
   }
 ]

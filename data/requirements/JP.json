@@ -29,5 +29,47 @@
     },
     "source": "https://vjw-lp.digital.go.jp/en/",
     "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "jp-visa-ru",
+    "destination": "JP",
+    "appliesTo": { "passports": ["RU"] },
+    "kind": "visa",
+    "name": { "ru": "Нужна виза (бесплатно)", "en": "Visa required (free of charge)" },
+    "officialUrl": "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+    "fee": { "amount": 0, "currency": "JPY" },
+    "processing": {
+      "ru": "Минимум 5 рабочих дней, в сезон сакуры и осенних клёнов — до 10–14",
+      "en": "At least 5 working days, up to 10–14 in cherry blossom and autumn leaf season"
+    },
+    "recommendDaysBeforeArrival": 30,
+    "passportValidity": { "ru": "Действителен на весь срок пребывания", "en": "Valid for the whole stay" },
+    "notes": {
+      "ru": "eVISA для граждан России недоступна — нужна обычная виза-наклейка. Консульский сбор не взимается. Подаётся в посольстве или генконсульствах Японии, можно через посредника без доверенности: 2 анкеты и 2 фото. Подать можно не раньше чем за 90 дней: виза действует 3 месяца с даты выдачи.",
+      "en": "eVISA is not available for Russian citizens — you need a regular visa sticker. No consular fee. Apply at the Embassy or Consulates-General of Japan, also via an intermediary without power of attorney: 2 application forms and 2 photos. Apply no earlier than 90 days ahead: the visa is valid for 3 months from issue."
+    },
+    "source": "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+    "verifiedAt": "2026-11-10"
+  },
+  {
+    "id": "jp-visa-cis",
+    "destination": "JP",
+    "appliesTo": { "passports": ["KZ", "BY", "UZ", "KG", "AM"] },
+    "kind": "visa",
+    "name": { "ru": "Нужна виза", "en": "Visa required" },
+    "officialUrl": "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+    "processing": {
+      "ru": "Минимум 5 рабочих дней, в сезон сакуры и осенних клёнов — до 10–14",
+      "en": "At least 5 working days, up to 10–14 in cherry blossom and autumn leaf season"
+    },
+    "recommendDaysBeforeArrival": 30,
+    "passportValidity": { "ru": "Действителен на весь срок пребывания", "en": "Valid for the whole stay" },
+    "notes": {
+      "ru": "eVISA для этих стран недоступна — нужна обычная виза-наклейка. Подаётся в посольстве Японии в своей стране; сбор за однократную визу — около 3000 иен в местной валюте. Подать можно не раньше чем за 90 дней: виза действует 3 месяца с даты выдачи.",
+      "en": "eVISA is not available for these nationalities — you need a regular visa sticker. Apply at the Japanese embassy in your country; a single-entry visa costs about ¥3,000 in local currency. Apply no earlier than 90 days ahead: the visa is valid for 3 months from issue."
+    },
+    "source": "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+    "verifiedAt": "2026-11-10",
+    "fee": { "amount": 3000, "currency": "JPY" }
   }
 ]

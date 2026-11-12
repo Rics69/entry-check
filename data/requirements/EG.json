@@ -52,5 +52,25 @@
     "validFrom": "2026-11-01",
     "source": "https://www.mfa.gov.eg/",
     "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "eg-voa-west",
+    "destination": "EG",
+    "appliesTo": { "passports": ["US", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "CA", "AU"] },
+    "kind": "visa_on_arrival",
+    "name": { "ru": "Виза по прилёте или e-Visa на 30 дней", "en": "Visa on arrival or e-Visa for 30 days" },
+    "officialUrl": "https://www.visa2egypt.gov.eg/",
+    "fee": { "amount": 30, "currency": "USD" },
+    "stayLimitDays": 30,
+    "passportValidity": {
+      "ru": "Не менее 6 месяцев с даты въезда и 1 чистая страница для визы",
+      "en": "At least 6 months from the date of entry and 1 blank page for the visa"
+    },
+    "notes": {
+      "ru": "Визу-марку (30 $ наличными) можно купить в аэропорту или заранее оформить e-Visa на visa2egypt.gov.eg — минимум за 7 дней до вылета; многократная e-Visa — 65 $. С 1 января 2027 однократная виза — 33 $. Курорты Южного Синая (Шарм-эль-Шейх, Дахаб, Нувейба, Таба) до 15 дней без выезда за их пределы — бесплатный штамп «Sinai only»; в Хургаде и Каире он не действует.",
+      "en": "Buy the visa stamp ($30 cash) at the airport or get an e-Visa in advance at visa2egypt.gov.eg — at least 7 days before departure; a multiple-entry e-Visa costs $65. From 1 January 2027 a single-entry visa is $33. South Sinai resorts only (Sharm El Sheikh, Dahab, Nuweiba, Taba) for up to 15 days: free “Sinai only” stamp; it is not valid in Hurghada or Cairo."
+    },
+    "source": "https://www.visa2egypt.gov.eg/",
+    "verifiedAt": "2026-11-10"
   }
 ]

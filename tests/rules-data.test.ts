@@ -58,17 +58,31 @@ describe("структура правил", () => {
 describe("охват MVP", () => {
   const pairs = coveragePairs();
 
-  it("170 пар «паспорт → зона»", () => {
-    expect(pairs).toHaveLength(170);
+  it("256 пар «паспорт → зона»: все 16 паспортов × 16 зон", () => {
+    expect(pairs).toHaveLength(256);
   });
 
+  /**
+   * На каждую дату у пары должен быть известен режим въезда. Единственное допустимое исключение —
+   * правило с явной датой окончания (например, временный безвиз Китая до 31.12.2026): после неё
+   * движок честно говорит «нет данных», пока правило не продлят.
+   */
   it.each(REFERENCE_DATES)("на %s у каждой пары известен режим въезда", (date) => {
     const missing = pairs.filter(({ passport, zone }) => {
       const result = evaluateTrip(
         { passport, stops: [{ country: countryOfZone(zone), date }] },
         { now: new Date("2026-11-08T00:00:00Z"), rules: ALL_RULES },
       );
-      return result.stops[0].status === "unknown";
+      if (result.stops[0].status !== "unknown") return false;
+      const expired = ALL_RULES.some(
+        (r) =>
+          r.destination === zone &&
+          isEntryKind(r.kind) &&
+          r.validUntil !== undefined &&
+          r.validUntil < date &&
+          ruleApplies({ ...r, validFrom: undefined, validUntil: undefined }, passport, date),
+      );
+      return !expired;
     });
     expect(missing.map((p) => `${p.passport}→${p.zone}`)).toEqual([]);
   });

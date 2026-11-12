@@ -193,7 +193,7 @@ export function RulesReview({ rules, today }: { rules: Requirement[]; today: str
           </span>
         </div>
 
-        <div className="mt-4 grid gap-6 lg:grid-cols-2">
+        <div className="mt-4 grid gap-6">
           {(Object.entries(COVERAGE) as ["ru" | "en", (typeof COVERAGE)["ru"]][]).map(([track, cov]) => (
             <CoverageTable key={track} track={track} passports={cov.passports} zones={cov.zones} rules={rules} date={matrixDate} today={today} onPick={focusPair} active={{ passport, zone }} />
           ))}

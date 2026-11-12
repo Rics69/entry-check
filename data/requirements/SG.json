@@ -45,5 +45,37 @@
     },
     "source": "https://eservices.ica.gov.sg/sgarrivalcard/",
     "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "sg-visa-free-kz",
+    "destination": "SG",
+    "appliesTo": { "passports": ["KZ"] },
+    "kind": "visa_free",
+    "name": { "ru": "Без визы до 30 дней (взаимный безвиз)", "en": "Visa-free up to 30 days (mutual agreement)" },
+    "officialUrl": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements",
+    "stayLimitDays": 30,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "source": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements",
+    "verifiedAt": "2026-11-10"
+  },
+  {
+    "id": "sg-visa-cis",
+    "destination": "SG",
+    "appliesTo": { "passports": ["RU", "BY", "UZ", "KG", "AM"] },
+    "kind": "visa",
+    "name": { "ru": "Нужна виза (через спонсора или уполномоченного агента)", "en": "Visa required (via a local sponsor or authorised agent)" },
+    "officialUrl": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements",
+    "processing": { "ru": "Обычно от 3 рабочих дней", "en": "Usually from 3 working days" },
+    "recommendDaysBeforeArrival": 21,
+    "passportValidity": { "ru": "Не менее 6 месяцев с даты въезда", "en": "At least 6 months from the date of entry" },
+    "onwardTicketMayBeAsked": true,
+    "notes": {
+      "ru": "Самостоятельно на сайте ICA подать нельзя — только через уполномоченного визового агента или местного спонсора (система SAVE); агенты берут свою комиссию сверх сбора. ICA советует подавать не раньше чем за 30 и не позже чем за 14 дней до въезда. Обратный билет обязателен. Безвизовый транзит до 96 часов (VFTF) — только при перелёте в третью страну; маршрут туда-обратно не подходит.",
+      "en": "You cannot apply on the ICA website yourself — only via an authorised visa agent or a local sponsor (SAVE system); agents charge their own fee on top. ICA advises applying no earlier than 30 and no later than 14 days before entry. A return ticket is mandatory. The 96-hour Visa Free Transit Facility applies only when flying on to a third country; a round trip does not qualify."
+    },
+    "source": "https://moscow.mfa.gov.sg/visa-free-transit-facility/",
+    "verifiedAt": "2026-11-10",
+    "fee": { "amount": 30, "currency": "SGD" }
   }
 ]
