@@ -74,9 +74,10 @@ export default function HomePage({ params }: PageProps<"/[locale]">) {
         </div>
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-14 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:py-28 max-sm:pt-10">
           <div>
-            <p className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/80 px-3 py-1 text-sm text-muted backdrop-blur-sm">
-              <span className="size-2 rounded-full bg-ok" aria-hidden="true" />
-              {t("hero.eyebrow")}
+            {/* Надзаголовок в духе пиксельной кнопки: моноширинный, капсом, с короткой линией акцента. */}
+            <p className="flex items-center gap-3 font-mono text-xs font-medium tracking-[0.08em] text-muted uppercase">
+              <span className="h-px w-8 shrink-0 bg-accent" aria-hidden="true" />
+              <span className="text-balance">{t("hero.eyebrow")}</span>
             </p>
             <MagneticTitle
               text={t("hero.title")}
